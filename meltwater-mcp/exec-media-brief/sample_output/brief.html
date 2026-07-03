@@ -1,0 +1,563 @@
+<!--
+  Exec Media Brief — flat static template (brand-neutral).
+
+  This is a clean, self-contained HTML shell. render.py does two substitutions:
+    :root{--primary:#2b59c3;--primary-hi:#1e3e8c;--ink:#1e2433;--accent-warm:#d99a2b;--surface:#f6f5f2;}  — a :root override block built from the brand config's `theme`
+      <div class="mast">
+    <div>
+      <div class="mast-line"><span class="wm-text">Northwind</span><h1>Daily Brief</h1></div>
+      <div class="mast-meta">Friday, June 26, 2026</div>
+    </div>
+    <div class="glance-row">
+      <div class="glance">
+        <div class="g-big">4,180</div>
+        <div class="g-sub">signals today</div>
+        <div class="g-d bad">+22.0% vs 30d avg</div>
+      </div>
+      <div class="glance ">
+        <div class="g-big">43%</div>
+        <div class="g-sub">overall neutral</div>
+        <div class="g-d">21% pos · 36% neg</div>
+      </div>
+    </div>
+  </div>
+  <div class="pad">
+    <div class="exec"><span class="lab">Executive Summary</span><p>Coverage ran hot at 4,180 signals (+22% vs the 30-day norm), tipping negative on a viral supply-chain complaint. The dominant story is a competitor&#x27;s US expansion announcement being framed directly against Northwind. A positive product-launch thread on Reddit is the notable secondary signal.</p></div>
+    <div class="sec-title"><span class="pill">Sentiment</span><span class="ln"></span><span class="count">last 24h</span></div>
+    <div class="ptiles">
+    <div class="tile">
+      <div class="t-name">News</div>
+      <div class="t-vol">128</div>
+      <div class="t-big t-neu">66%</div>
+      <div class="t-dom">neutral</div>
+      <div class="t-bar"><div class="sbar"><i class="pos" style="width:24%"></i><i class="neu" style="width:66%"></i><i class="neg" style="width:10%"></i></div></div>
+      <div class="t-pct">24 · 66 · 10</div>
+      <div class="t-delta delta flat"></div>
+    </div>
+    <div class="tile">
+      <div class="t-name">Instagram</div>
+      <div class="t-vol">612</div>
+      <div class="t-big t-neu">42%</div>
+      <div class="t-dom">neutral</div>
+      <div class="t-bar"><div class="sbar"><i class="pos" style="width:41%"></i><i class="neu" style="width:42%"></i><i class="neg" style="width:17%"></i></div></div>
+      <div class="t-pct">41 · 42 · 17</div>
+      <div class="t-delta delta good">-4.0pp neg</div>
+    </div>
+    <div class="tile">
+      <div class="t-name">Twitter / X</div>
+      <div class="t-vol">2,510</div>
+      <div class="t-big t-neg">52%</div>
+      <div class="t-dom">negative</div>
+      <div class="t-bar"><div class="sbar"><i class="pos" style="width:9%"></i><i class="neu" style="width:39%"></i><i class="neg" style="width:52%"></i></div></div>
+      <div class="t-pct">9 · 39 · 52</div>
+      <div class="t-delta delta bad">+11.0pp neg</div>
+    </div>
+    <div class="tile">
+      <div class="t-name">Facebook</div>
+      <div class="t-vol">204</div>
+      <div class="t-big t-neu">44%</div>
+      <div class="t-dom">neutral</div>
+      <div class="t-bar"><div class="sbar"><i class="pos" style="width:33%"></i><i class="neu" style="width:44%"></i><i class="neg" style="width:23%"></i></div></div>
+      <div class="t-pct">33 · 44 · 23</div>
+      <div class="t-delta delta flat"></div>
+    </div>
+    <div class="tile">
+      <div class="t-name">Reddit</div>
+      <div class="t-vol">701</div>
+      <div class="t-big t-neu">41%</div>
+      <div class="t-dom">neutral</div>
+      <div class="t-bar"><div class="sbar"><i class="pos" style="width:28%"></i><i class="neu" style="width:41%"></i><i class="neg" style="width:31%"></i></div></div>
+      <div class="t-pct">28 · 41 · 31</div>
+      <div class="t-delta delta good">-6.0pp neg</div>
+    </div>
+    <div class="tile">
+      <div class="t-name">TikTok</div>
+      <div class="t-vol">25</div>
+      <div class="t-big t-pos">58%</div>
+      <div class="t-dom">positive</div>
+      <div class="t-bar"><div class="sbar"><i class="pos" style="width:58%"></i><i class="neu" style="width:20%"></i><i class="neg" style="width:22%"></i></div></div>
+      <div class="t-pct">58 · 20 · 22</div>
+      <div class="t-delta delta flat"></div>
+    </div>
+    </div>
+    <p class="strip-cap">Negative leads on Twitter/X (52%), driven by a viral oat-milk shortage complaint. Instagram and TikTok lean positive on the new Cold Brew Flights launch.</p>
+  </div>
+  <div class="pad">
+    <div class="sec-title"><span class="pill"><span class="pn">01</span> Earned Media</span><span class="ln"></span><span class="count">3 stories</span></div>
+    <div class="hero-card"><div class="hc-body">
+        <span class="kick">Competitor — Daybreak US Expansion</span>
+        <h2><a class="hl" href="https://example.com/daybreak-expansion" target="_blank" rel="noopener">Daybreak Roasters to open 300 US cafés — positioned as the anti-Northwind</a></h2>
+        <div class="out">The Daily Grind · Jun 26 · Reach 1,540,220</div>
+        <p class="dek">Daybreak confirmed a 300-location US rollout through 2027, with executives repeatedly framing the chain as the value alternative to Northwind. Analysts flagged the pricing gap as the central competitive threat.</p>
+        <div class="quotes"><div class="qbox"><q>We&#x27;re investing in exactly the moments and markets our customers tell us matter most.</q><div class="by">— Priya Anand, VP Comms, Northwind Coffee</div></div><div class="qbox"><q>This is a direct run at Northwind&#x27;s mid-tier position.</q><div class="by">— Retail analyst, Meridian Research</div></div></div>
+        <div class="statrow"><div class="s"><div class="k">Reach</div><div class="v">1,540,220</div></div><div class="s"><div class="k">Published</div><div class="v">June 26, 2026</div></div></div>
+      </div></div>
+    <div style="margin-top:12px"><div class="cardgrid">
+    <div class="scard">
+      <span class="kick">Product — Cold Brew Flights</span>
+      <h3><a class="hl" href="https://example.com/cold-brew-flights" target="_blank" rel="noopener">Northwind&#x27;s Cold Brew Flights land to early praise</a></h3>
+      <p class="dek">The tasting-flight format drew positive first-look coverage across food press, with reviewers highlighting the single-origin line-up.</p>
+      <div class="out">Sip Weekly · Jun 25 · Reach 410,880</div>
+    </div>
+    <div class="scard">
+      <span class="kick">Operations — Supply</span>
+      <h3><a class="hl" href="https://example.com/oat-milk" target="_blank" rel="noopener">Oat-milk shortage hits select Northwind locations</a></h3>
+      <p class="dek">Regional out-of-stocks drew customer complaints; the company said restock is expected within the week.</p>
+      <div class="out">Market Ledger · Jun 26 · Reach 296,110</div>
+    </div>
+    </div></div>
+  </div>
+  <div class="pad">
+    <div class="sec-title"><span class="pill"><span class="pn">02</span> Social - Earned / UGC</span><span class="ln"></span><span class="count">3 posts</span></div>
+    <div class="cardgrid">
+    <div class="scard">
+      <span class="kick">Twitter / X · @coffeewatch</span>
+      <h3><a class="hl" href="https://example.com/x1" target="_blank" rel="noopener">Thread: why can&#x27;t I get oat milk at any Northwind this week??</a></h3>
+      <p class="dek">Complaint thread about the oat-milk shortage picked up momentum, quote-tweeted by several food creators.</p>
+      <div class="metrics"><div class="metric"><b>212,400</b><span>Views</span></div><div class="metric"><b>1,840</b><span>Eng</span></div></div>
+      <div class="out">Jun 26</div>
+    </div>
+    <div class="scard">
+      <span class="kick">Instagram · @bea.pours</span>
+      <h3><a class="hl" href="https://example.com/ig1" target="_blank" rel="noopener">First look at the new Cold Brew Flights 👀</a></h3>
+      <p class="dek">Creator taste-test of the new flight format. Strong positive affinity content with an engaged comment section.</p>
+      <div class="metrics"><div class="metric"><b>98,300</b><span>Views</span></div><div class="metric"><b>6,210</b><span>Eng</span></div></div>
+      <div class="out">Jun 25</div>
+    </div>
+    <div class="scard scard--wide">
+      <div class="scard-body"><span class="kick">TikTok · @thecaffeinatedcritic</span>
+      <h3><a class="hl" href="https://example.com/tt1" target="_blank" rel="noopener">Ranking every Northwind cold brew</a></h3>
+      <p class="dek">In-car review ranking the cold brew line-up; the new flights come out on top.</p>
+      <div class="metrics"><div class="metric"><b>44,900</b><span>Views</span></div><div class="metric"><b>3,020</b><span>Eng</span></div></div>
+      <div class="out">Jun 26</div></div>
+    </div>
+    </div>
+  </div>
+  <div class="pad">
+    <div class="sec-title"><span class="pill"><span class="pn">03</span> Reddit</span><span class="ln"></span><span class="count">r/NorthwindCoffee</span></div>
+    <div class="reddit-card"><div class="eng"><div class="n">412</div><div class="l">eng</div></div>
+      <div class="body">
+        <div class="hd">r/NorthwindCoffee · Jun 25 · u/beancounter · Reach 88,200</div>
+        <h3><a class="hl" href="https://example.com/rd1" target="_blank" rel="noopener">The Cold Brew Flight is actually a great idea — full breakdown</a></h3>
+        <p class="dek">Enthusiastic breakdown of the four-origin flight with tasting notes; became the week&#x27;s top thread.</p><div class="qline">Tried all four this morning. The Ethiopia natural is unreal — worth it for that alone.</div>
+      </div>
+    </div>
+    <div class="reddit-card"><div class="eng"><div class="n">156</div><div class="l">eng</div></div>
+      <div class="body">
+        <div class="hd">r/NorthwindCoffee · Jun 26 · u/ptl_ops · Reach 61,540</div>
+        <h3><a class="hl" href="https://example.com/rd2" target="_blank" rel="noopener">PSA: oat milk out at three downtown locations</a></h3>
+        <p class="dek">Community heads-up on the regional shortage, with staff confirming restock timing in the comments.</p>
+      </div>
+    </div>
+  </div>
+  <div class="pad">
+    <div class="sec-title"><span class="pill"><span class="pn">04</span> Competitors</span><span class="ln"></span></div>
+    <div class="cardgrid">
+    <div class="scard scard--wide">
+      <div class="scard-body"><span class="kick">Competitor — Daybreak Roasters</span>
+      <h3><a class="hl" href="https://example.com/daybreak-expansion" target="_blank" rel="noopener">Daybreak&#x27;s 300-café US push dominates competitor coverage</a></h3>
+      <p class="dek">The expansion story accounted for the bulk of competitor share-of-voice this window; other chains were quiet.</p>
+      <div class="out">The Daily Grind · Jun 26 · Reach 1,540,220</div></div>
+    </div>
+    </div>
+  </div>
+  <div class="pad"><div class="bottomline">
+    <h2>Bottom line <span class="tk">at a glance</span></h2>
+    <ul><li><b>Volume:</b> 4,180 signals, +22% vs 30d — driven by the Daybreak expansion story and the oat-milk complaint.</li><li><b>Top earned:</b> The Daily Grind — Daybreak&#x27;s anti-Northwind US rollout. Reach 1.54M.</li><li><b>Watch:</b> Twitter/X negativity +11pp on the oat-milk shortage; restock messaging recommended.</li><li><b>Bright spot:</b> Cold Brew Flights launch driving positive Reddit + Instagram engagement.</li></ul>
+  </div></div>
+  <div class="foot"><span class="fl">Confidential — internal distribution only · Meltwater · Search 10042117 · US</span><span class="fr">Northwind Coffee</span></div>   — the rendered report markup (masthead, sentiment, sections…)
+
+  There is NO client-side rendering, no bundler, no data:-URI scripts, no external
+  fonts. The output is a single flat HTML file that opens in any browser / email
+  client and prints straight to PDF. Fork it and restyle via the brand config.
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northwind Coffee · Daily Brief — Friday, June 26, 2026</title>
+<style>
+:root{
+  /* ── Brand-neutral defaults. Override any of these via the brand config
+        `theme` block — render.py injects them in :root{--primary:#2b59c3;--primary-hi:#1e3e8c;--ink:#1e2433;--accent-warm:#d99a2b;--surface:#f6f5f2;} below. ── */
+  --primary:      #2b59c3;   /* section pills, kickers, links, accents        */
+  --primary-hi:   #1e3e8c;   /* hover / pressed                               */
+  --ink:          #1e2433;   /* dark surfaces: glance boxes, bottom line      */
+  --accent-warm:  #d99a2b;   /* bottom-line tag                               */
+
+  --surface:      #f6f5f2;   /* the report page                               */
+  --page:         #e7e4dd;   /* behind the report                            */
+  --card:         #ffffff;   /* cards / tiles                                 */
+  --card-alt:     #eeeae1;   /* exec-summary panel, soft fills                */
+
+  --fg:           #26303f;   /* body text                                     */
+  --fg-70:        #4b5563;
+  --fg-50:        #6b7280;
+  --fg-30:        #b6bcc6;
+  --line:         #e6e3dd;
+  --line-strong:  #cfcbc3;
+
+  --pos:      #2f8f5b;  --pos-bar: #3fa77e;
+  --neg:      #d0342c;  --neg-bar: #d0342c;
+  --neu:      #7c828c;  --neu-bar: #d7d3cb;
+
+  --font-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-body:    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono:    ui-monospace, "SF Mono", "IBM Plex Mono", Menlo, Consolas, monospace;
+
+  --shadow-sm: 0 1px 2px rgba(20,24,33,.08);
+  --shadow-md: 0 4px 12px rgba(20,24,33,.08), 0 1px 2px rgba(20,24,33,.04);
+  --shadow-lg: 0 12px 32px rgba(20,24,33,.12), 0 2px 4px rgba(20,24,33,.04);
+  --radius:    16px;
+}
+:root{--primary:#2b59c3;--primary-hi:#1e3e8c;--ink:#1e2433;--accent-warm:#d99a2b;--surface:#f6f5f2;}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--page);
+  font-family: var(--font-body);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a { color: inherit; }
+
+.report {
+  width: 816px;
+  max-width: 100%;
+  margin: 40px auto;
+  background: var(--surface);
+  box-shadow: 0 24px 64px rgba(20,24,33,.16);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.pad { padding: 0 56px; }
+
+/* ── MASTHEAD ── */
+.mast { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; padding: 40px 56px 28px; }
+.mast-line { display: flex; align-items: flex-end; gap: 18px; }
+.mast .wm-text { font-family: var(--font-display); font-weight: 900; font-size: 40px; letter-spacing: -1px; line-height: .9; color: var(--primary); white-space: nowrap; }
+.mast img.wm { height: 46px; display: block; }
+.mast h1 { font-family: var(--font-display); font-weight: 900; font-size: 46px; letter-spacing: -1.5px; margin: 0; line-height: .82; color: var(--ink); white-space: nowrap; }
+.mast .mast-meta { font-family: var(--font-mono); font-size: 15px; letter-spacing: .2px; color: var(--fg-50); margin-top: 16px; }
+.glance-row { display: flex; gap: 10px; }
+.glance { text-align: center; background: var(--ink); color: #fff; border-radius: 16px; padding: 14px 18px; min-width: 128px; box-shadow: var(--shadow-md); }
+.glance.glance-neg { background: linear-gradient(135deg, #d0342c, #9a2019); }
+.glance.glance-pos { background: linear-gradient(135deg, #2f8f5b, #1c6b40); }
+.glance .g-big { font-family: var(--font-display); font-weight: 900; font-size: 30px; line-height: 1; color: #fff; }
+.glance .g-sub { font-size: 10px; opacity: .82; margin-top: 4px; letter-spacing: .3px; }
+.glance .g-d { font-weight: 700; font-size: 11px; margin-top: 8px; color: rgba(255,255,255,.85); }
+.glance .g-d.good { color: #8fe0bd; }
+.glance .g-d.bad  { color: #ffb4ad; }
+
+/* ── EXECUTIVE SUMMARY ── */
+.exec { background: var(--card-alt); border-radius: 20px; padding: 24px 26px; margin: 8px 0; }
+.exec .lab { display: inline-block; font-family: var(--font-body); font-weight: 700; font-size: 10.5px; letter-spacing: 1.2px; text-transform: uppercase; color: #fff; background: var(--primary); padding: 5px 11px; border-radius: 9999px; margin-bottom: 14px; }
+.exec p { margin: 0; font-size: 15.5px; line-height: 24px; color: var(--fg); }
+
+/* ── SECTION TITLE ── */
+.sec-title { display: flex; align-items: center; gap: 12px; margin: 40px 0 18px; }
+.sec-title .pill { display: inline-flex; align-items: baseline; gap: 7px; font-family: var(--font-body); font-weight: 700; font-size: 12px; letter-spacing: .4px; color: #fff; background: var(--primary); padding: 7px 15px; border-radius: 9999px; }
+.sec-title .pill .pn { font-family: var(--font-display); font-weight: 900; font-size: 13px; }
+.sec-title .ln { flex: 1; height: 1px; background: var(--line); }
+.sec-title .count { font-family: var(--font-mono); font-size: 11px; color: var(--fg-50); }
+
+/* ── SENTIMENT TILES ── */
+.ptiles { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+.tile { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 13px 12px; box-shadow: var(--shadow-sm); }
+.tile .t-name { font-family: var(--font-display); font-weight: 900; font-size: 12.5px; line-height: 1.1; color: var(--ink); }
+.tile .t-vol { font-family: var(--font-mono); font-size: 10px; color: var(--fg-50); margin-top: 2px; }
+.tile .t-big { font-family: var(--font-display); font-weight: 900; font-size: 32px; line-height: 1; margin-top: 10px; letter-spacing: -1px; }
+.tile .t-big.t-neg { color: var(--neg); }
+.tile .t-big.t-pos { color: var(--pos); }
+.tile .t-big.t-neu { color: var(--ink); }
+.tile .t-dom { font-size: 10px; letter-spacing: .3px; text-transform: uppercase; color: var(--fg-50); margin-top: 1px; }
+.tile .t-bar { height: 8px; margin: 11px 0 8px; }
+.tile .t-pct { font-family: var(--font-mono); font-size: 11px; color: var(--fg-70); letter-spacing: .2px; }
+.tile .t-delta { display: block; margin-top: 4px; }
+.strip-cap { font-size: 12px; line-height: 18px; color: var(--fg-50); margin: 14px 2px 0; }
+
+/* stacked sentiment bar */
+.sbar { display: flex; height: 100%; width: 100%; border-radius: 9999px; overflow: hidden; background: var(--line); }
+.sbar > i { display: block; height: 100%; }
+.sbar .pos { background: var(--pos-bar); }
+.sbar .neu { background: var(--neu-bar); }
+.sbar .neg { background: var(--neg-bar); }
+.delta { font-family: var(--font-body); font-weight: 700; font-size: 10.5px; letter-spacing: .2px; white-space: nowrap; }
+.delta.good { color: var(--pos); }
+.delta.bad  { color: var(--neg); }
+.delta.flat { color: var(--fg-50); }
+
+/* ── HERO STORY CARD ── */
+.hero-card { background: var(--card); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); }
+.hero-card .hc-body { padding: 24px 26px 26px; }
+.kick { font-family: var(--font-body); font-weight: 700; font-size: 10.5px; letter-spacing: 1px; text-transform: uppercase; color: var(--primary); }
+.hero-card h2 { font-family: var(--font-display); font-weight: 900; font-size: 28px; line-height: 1.06; letter-spacing: -.5px; margin: 8px 0 10px; color: var(--ink); }
+.out { font-family: var(--font-mono); font-size: 11px; color: var(--fg-50); margin-bottom: 12px; }
+.hero-card p.dek { margin: 0; font-size: 14.5px; line-height: 22px; color: var(--fg-70); }
+.quotes { display: grid; gap: 10px; margin-top: 16px; }
+.qbox { background: var(--card-alt); border-radius: 12px; padding: 14px 16px; }
+.qbox q { font-family: var(--font-display); font-weight: 800; font-size: 15.5px; line-height: 1.24; color: var(--ink); quotes: none; display: block; }
+.qbox .by { font-size: 11.5px; color: var(--fg-50); margin-top: 7px; font-weight: 600; }
+.statrow { display: flex; gap: 28px; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+.statrow .s .k { font-size: 10px; letter-spacing: .4px; text-transform: uppercase; color: var(--fg-50); margin-bottom: 2px; }
+.statrow .s .v { font-family: var(--font-display); font-weight: 900; font-size: 17px; color: var(--ink); }
+
+/* ── STORY CARDS (grid) ── */
+.cardgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.scard { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; overflow: hidden; }
+.scard h3 { font-family: var(--font-display); font-weight: 900; font-size: 18px; line-height: 1.12; margin: 7px 0 8px; color: var(--ink); }
+.scard p.dek { margin: 0; font-size: 13px; line-height: 19px; color: var(--fg-70); }
+.scard .scard-img { width: calc(100% + 40px); margin: -18px -20px 14px; height: 168px; object-fit: cover; display: block; }
+.scard .qline { font-family: var(--font-body); font-style: italic; font-size: 13px; line-height: 19px; color: var(--fg); border-left: 3px solid var(--primary); padding-left: 12px; margin-top: 12px; }
+.scard .out { margin-top: auto; padding-top: 14px; }
+.scard--wide { grid-column: 1 / -1; flex-direction: row; align-items: stretch; gap: 20px; }
+.scard--wide .scard-img-side { flex: 0 0 200px; width: 200px; align-self: stretch; object-fit: cover; border-radius: 12px; }
+.scard--wide .scard-body { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.scard--wide .scard-body .out { margin-top: auto; padding-top: 14px; }
+
+/* headline links */
+.hl { color: inherit; text-decoration: none; }
+.hl:hover { color: var(--primary); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+@media print { .hl { color: inherit; text-decoration: none; } }
+
+/* ── REDDIT-STYLE CARDS (engagement rail) ── */
+.reddit-card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px 20px; box-shadow: var(--shadow-sm); display: flex; gap: 18px; align-items: flex-start; }
+.reddit-card .eng { flex: 0 0 auto; text-align: center; background: var(--card-alt); border-radius: 12px; padding: 12px 14px; min-width: 76px; }
+.reddit-card .eng .n { font-family: var(--font-display); font-weight: 900; font-size: 22px; line-height: 1; color: var(--primary); }
+.reddit-card .eng .l { font-size: 9px; letter-spacing: .6px; text-transform: uppercase; color: var(--fg-50); margin-top: 4px; }
+.reddit-card .body { flex: 1; min-width: 0; }
+.reddit-card .hd { font-family: var(--font-mono); font-size: 11px; color: var(--fg-50); margin-bottom: 5px; }
+.reddit-card h3 { font-family: var(--font-display); font-weight: 900; font-size: 18px; line-height: 1.14; margin: 0 0 8px; color: var(--ink); }
+.reddit-card p.dek { margin: 0; font-size: 13.5px; line-height: 20px; color: var(--fg-70); }
+.reddit-card .qline { font-family: var(--font-body); font-style: italic; font-size: 13.5px; color: var(--fg); border-left: 3px solid var(--primary); padding-left: 12px; margin-top: 12px; }
+
+/* metric chips (social) */
+.metrics { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.metric { display: inline-flex; align-items: baseline; gap: 5px; background: var(--card-alt); border: 1px solid var(--line); border-radius: 9999px; padding: 5px 12px; }
+.metric b { font-family: var(--font-display); font-weight: 900; font-size: 14px; color: var(--ink); }
+.metric span { font-size: 10.5px; letter-spacing: .3px; text-transform: uppercase; color: var(--fg-50); }
+
+/* ── EMPTY STATE ── */
+.empty-card { background: var(--card); border: 1px dashed var(--line-strong); border-radius: 16px; padding: 22px 24px; display: flex; align-items: flex-start; gap: 16px; }
+.empty-card .mk { flex: 0 0 auto; width: 40px; height: 40px; border-radius: 9999px; background: var(--card-alt); display: flex; align-items: center; justify-content: center; }
+.empty-card .mk svg { width: 22px; height: 22px; stroke: var(--fg-50); fill: none; stroke-width: 1.6; }
+.empty-card .ek { font-family: var(--font-body); font-weight: 700; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--fg-50); }
+.empty-card p { margin: 6px 0 0; font-size: 14px; line-height: 21px; color: var(--fg-70); }
+
+/* ── BOTTOM LINE ── */
+.bottomline { background: var(--ink); color: #fff; border-radius: 22px; padding: 30px 32px; margin-top: 40px; }
+.bottomline h2 { font-family: var(--font-display); font-weight: 900; font-size: 22px; margin: 0 0 18px; color: #fff; display: flex; align-items: center; gap: 12px; }
+.bottomline h2 .tk { font-family: var(--font-body); font-weight: 700; font-size: 10.5px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent-warm); border: 1px solid rgba(255,255,255,.28); padding: 4px 10px; border-radius: 9999px; }
+.bottomline ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 13px; }
+.bottomline li { display: flex; gap: 13px; font-size: 14px; line-height: 21px; color: rgba(255,255,255,.9); }
+.bottomline li::before { content: ""; flex: 0 0 auto; width: 7px; height: 7px; border-radius: 9999px; background: var(--primary); margin-top: 7px; }
+.bottomline li b { color: #fff; font-weight: 700; }
+
+/* ── FOOTER ── */
+.foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 28px 56px 40px; margin-top: 8px; border-top: 1px solid var(--line); }
+.foot .fl { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .3px; color: var(--fg-50); }
+.foot .fr { font-family: var(--font-body); font-weight: 700; font-size: 10.5px; letter-spacing: 1px; text-transform: uppercase; color: var(--primary); }
+
+/* ── SAVE-AS-PDF BUTTON (screen only) ── */
+.print-btn { position: fixed; right: 28px; bottom: 28px; z-index: 50; display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-body); font-weight: 700; font-size: 14px; color: #fff; background: var(--primary); border: none; cursor: pointer; padding: 13px 20px; border-radius: 9999px; box-shadow: var(--shadow-lg); }
+.print-btn:hover { background: var(--primary-hi); }
+.print-btn svg { display: block; }
+
+/* ── RESPONSIVE ── */
+@media screen and (max-width: 680px) {
+  .pad { padding: 0 16px; }
+  .mast { flex-direction: column; gap: 16px; padding: 24px 16px 20px; }
+  .mast h1 { font-size: 32px; }
+  .glance-row { flex-direction: row; gap: 10px; }
+  .glance { min-width: 0; flex: 1; padding: 12px 10px; }
+  .ptiles { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .cardgrid { grid-template-columns: 1fr; gap: 10px; }
+  .scard--wide { flex-direction: column; }
+  .scard--wide .scard-img-side { width: 100%; height: 180px; }
+  .hero-card h2 { font-size: 22px; }
+  .foot { flex-direction: column; gap: 4px; padding: 16px; text-align: center; }
+}
+
+/* ── PRINT ── */
+@media print {
+  @page { size: letter; margin: 13mm 0; }
+  body { background: #fff; }
+  .print-btn { display: none !important; }
+  .report { width: auto; margin: 0; box-shadow: none; border-radius: 0; }
+  .mast, .foot { padding-left: 14mm; padding-right: 14mm; }
+  .pad { padding: 0 14mm; }
+  .tile, .hero-card, .scard, .reddit-card, .empty-card, .exec, .bottomline { break-inside: avoid; }
+  .sec-title { break-after: avoid; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+<div class="report" id="report">
+  <div class="mast">
+    <div>
+      <div class="mast-line"><span class="wm-text">Northwind</span><h1>Daily Brief</h1></div>
+      <div class="mast-meta">Friday, June 26, 2026</div>
+    </div>
+    <div class="glance-row">
+      <div class="glance">
+        <div class="g-big">4,180</div>
+        <div class="g-sub">signals today</div>
+        <div class="g-d bad">+22.0% vs 30d avg</div>
+      </div>
+      <div class="glance ">
+        <div class="g-big">43%</div>
+        <div class="g-sub">overall neutral</div>
+        <div class="g-d">21% pos · 36% neg</div>
+      </div>
+    </div>
+  </div>
+  <div class="pad">
+    <div class="exec"><span class="lab">Executive Summary</span><p>Coverage ran hot at 4,180 signals (+22% vs the 30-day norm), tipping negative on a viral supply-chain complaint. The dominant story is a competitor&#x27;s US expansion announcement being framed directly against Northwind. A positive product-launch thread on Reddit is the notable secondary signal.</p></div>
+    <div class="sec-title"><span class="pill">Sentiment</span><span class="ln"></span><span class="count">last 24h</span></div>
+    <div class="ptiles">
+    <div class="tile">
+      <div class="t-name">News</div>
+      <div class="t-vol">128</div>
+      <div class="t-big t-neu">66%</div>
+      <div class="t-dom">neutral</div>
+      <div class="t-bar"><div class="sbar"><i class="pos" style="width:24%"></i><i class="neu" style="width:66%"></i><i class="neg" style="width:10%"></i></div></div>
+      <div class="t-pct">24 · 66 · 10</div>
+      <div class="t-delta delta flat"></div>
+    </div>
+    <div class="tile">
+      <div class="t-name">Instagram</div>
+      <div class="t-vol">612</div>
+      <div class="t-big t-neu">42%</div>
+      <div class="t-dom">neutral</div>
+      <div class="t-bar"><div class="sbar"><i class="pos" style="width:41%"></i><i class="neu" style="width:42%"></i><i class="neg" style="width:17%"></i></div></div>
+      <div class="t-pct">41 · 42 · 17</div>
+      <div class="t-delta delta good">-4.0pp neg</div>
+    </div>
+    <div class="tile">
+      <div class="t-name">Twitter / X</div>
+      <div class="t-vol">2,510</div>
+      <div class="t-big t-neg">52%</div>
+      <div class="t-dom">negative</div>
+      <div class="t-bar"><div class="sbar"><i class="pos" style="width:9%"></i><i class="neu" style="width:39%"></i><i class="neg" style="width:52%"></i></div></div>
+      <div class="t-pct">9 · 39 · 52</div>
+      <div class="t-delta delta bad">+11.0pp neg</div>
+    </div>
+    <div class="tile">
+      <div class="t-name">Facebook</div>
+      <div class="t-vol">204</div>
+      <div class="t-big t-neu">44%</div>
+      <div class="t-dom">neutral</div>
+      <div class="t-bar"><div class="sbar"><i class="pos" style="width:33%"></i><i class="neu" style="width:44%"></i><i class="neg" style="width:23%"></i></div></div>
+      <div class="t-pct">33 · 44 · 23</div>
+      <div class="t-delta delta flat"></div>
+    </div>
+    <div class="tile">
+      <div class="t-name">Reddit</div>
+      <div class="t-vol">701</div>
+      <div class="t-big t-neu">41%</div>
+      <div class="t-dom">neutral</div>
+      <div class="t-bar"><div class="sbar"><i class="pos" style="width:28%"></i><i class="neu" style="width:41%"></i><i class="neg" style="width:31%"></i></div></div>
+      <div class="t-pct">28 · 41 · 31</div>
+      <div class="t-delta delta good">-6.0pp neg</div>
+    </div>
+    <div class="tile">
+      <div class="t-name">TikTok</div>
+      <div class="t-vol">25</div>
+      <div class="t-big t-pos">58%</div>
+      <div class="t-dom">positive</div>
+      <div class="t-bar"><div class="sbar"><i class="pos" style="width:58%"></i><i class="neu" style="width:20%"></i><i class="neg" style="width:22%"></i></div></div>
+      <div class="t-pct">58 · 20 · 22</div>
+      <div class="t-delta delta flat"></div>
+    </div>
+    </div>
+    <p class="strip-cap">Negative leads on Twitter/X (52%), driven by a viral oat-milk shortage complaint. Instagram and TikTok lean positive on the new Cold Brew Flights launch.</p>
+  </div>
+  <div class="pad">
+    <div class="sec-title"><span class="pill"><span class="pn">01</span> Earned Media</span><span class="ln"></span><span class="count">3 stories</span></div>
+    <div class="hero-card"><div class="hc-body">
+        <span class="kick">Competitor — Daybreak US Expansion</span>
+        <h2><a class="hl" href="https://example.com/daybreak-expansion" target="_blank" rel="noopener">Daybreak Roasters to open 300 US cafés — positioned as the anti-Northwind</a></h2>
+        <div class="out">The Daily Grind · Jun 26 · Reach 1,540,220</div>
+        <p class="dek">Daybreak confirmed a 300-location US rollout through 2027, with executives repeatedly framing the chain as the value alternative to Northwind. Analysts flagged the pricing gap as the central competitive threat.</p>
+        <div class="quotes"><div class="qbox"><q>We&#x27;re investing in exactly the moments and markets our customers tell us matter most.</q><div class="by">— Priya Anand, VP Comms, Northwind Coffee</div></div><div class="qbox"><q>This is a direct run at Northwind&#x27;s mid-tier position.</q><div class="by">— Retail analyst, Meridian Research</div></div></div>
+        <div class="statrow"><div class="s"><div class="k">Reach</div><div class="v">1,540,220</div></div><div class="s"><div class="k">Published</div><div class="v">June 26, 2026</div></div></div>
+      </div></div>
+    <div style="margin-top:12px"><div class="cardgrid">
+    <div class="scard">
+      <span class="kick">Product — Cold Brew Flights</span>
+      <h3><a class="hl" href="https://example.com/cold-brew-flights" target="_blank" rel="noopener">Northwind&#x27;s Cold Brew Flights land to early praise</a></h3>
+      <p class="dek">The tasting-flight format drew positive first-look coverage across food press, with reviewers highlighting the single-origin line-up.</p>
+      <div class="out">Sip Weekly · Jun 25 · Reach 410,880</div>
+    </div>
+    <div class="scard">
+      <span class="kick">Operations — Supply</span>
+      <h3><a class="hl" href="https://example.com/oat-milk" target="_blank" rel="noopener">Oat-milk shortage hits select Northwind locations</a></h3>
+      <p class="dek">Regional out-of-stocks drew customer complaints; the company said restock is expected within the week.</p>
+      <div class="out">Market Ledger · Jun 26 · Reach 296,110</div>
+    </div>
+    </div></div>
+  </div>
+  <div class="pad">
+    <div class="sec-title"><span class="pill"><span class="pn">02</span> Social - Earned / UGC</span><span class="ln"></span><span class="count">3 posts</span></div>
+    <div class="cardgrid">
+    <div class="scard">
+      <span class="kick">Twitter / X · @coffeewatch</span>
+      <h3><a class="hl" href="https://example.com/x1" target="_blank" rel="noopener">Thread: why can&#x27;t I get oat milk at any Northwind this week??</a></h3>
+      <p class="dek">Complaint thread about the oat-milk shortage picked up momentum, quote-tweeted by several food creators.</p>
+      <div class="metrics"><div class="metric"><b>212,400</b><span>Views</span></div><div class="metric"><b>1,840</b><span>Eng</span></div></div>
+      <div class="out">Jun 26</div>
+    </div>
+    <div class="scard">
+      <span class="kick">Instagram · @bea.pours</span>
+      <h3><a class="hl" href="https://example.com/ig1" target="_blank" rel="noopener">First look at the new Cold Brew Flights 👀</a></h3>
+      <p class="dek">Creator taste-test of the new flight format. Strong positive affinity content with an engaged comment section.</p>
+      <div class="metrics"><div class="metric"><b>98,300</b><span>Views</span></div><div class="metric"><b>6,210</b><span>Eng</span></div></div>
+      <div class="out">Jun 25</div>
+    </div>
+    <div class="scard scard--wide">
+      <div class="scard-body"><span class="kick">TikTok · @thecaffeinatedcritic</span>
+      <h3><a class="hl" href="https://example.com/tt1" target="_blank" rel="noopener">Ranking every Northwind cold brew</a></h3>
+      <p class="dek">In-car review ranking the cold brew line-up; the new flights come out on top.</p>
+      <div class="metrics"><div class="metric"><b>44,900</b><span>Views</span></div><div class="metric"><b>3,020</b><span>Eng</span></div></div>
+      <div class="out">Jun 26</div></div>
+    </div>
+    </div>
+  </div>
+  <div class="pad">
+    <div class="sec-title"><span class="pill"><span class="pn">03</span> Reddit</span><span class="ln"></span><span class="count">r/NorthwindCoffee</span></div>
+    <div class="reddit-card"><div class="eng"><div class="n">412</div><div class="l">eng</div></div>
+      <div class="body">
+        <div class="hd">r/NorthwindCoffee · Jun 25 · u/beancounter · Reach 88,200</div>
+        <h3><a class="hl" href="https://example.com/rd1" target="_blank" rel="noopener">The Cold Brew Flight is actually a great idea — full breakdown</a></h3>
+        <p class="dek">Enthusiastic breakdown of the four-origin flight with tasting notes; became the week&#x27;s top thread.</p><div class="qline">Tried all four this morning. The Ethiopia natural is unreal — worth it for that alone.</div>
+      </div>
+    </div>
+    <div class="reddit-card"><div class="eng"><div class="n">156</div><div class="l">eng</div></div>
+      <div class="body">
+        <div class="hd">r/NorthwindCoffee · Jun 26 · u/ptl_ops · Reach 61,540</div>
+        <h3><a class="hl" href="https://example.com/rd2" target="_blank" rel="noopener">PSA: oat milk out at three downtown locations</a></h3>
+        <p class="dek">Community heads-up on the regional shortage, with staff confirming restock timing in the comments.</p>
+      </div>
+    </div>
+  </div>
+  <div class="pad">
+    <div class="sec-title"><span class="pill"><span class="pn">04</span> Competitors</span><span class="ln"></span></div>
+    <div class="cardgrid">
+    <div class="scard scard--wide">
+      <div class="scard-body"><span class="kick">Competitor — Daybreak Roasters</span>
+      <h3><a class="hl" href="https://example.com/daybreak-expansion" target="_blank" rel="noopener">Daybreak&#x27;s 300-café US push dominates competitor coverage</a></h3>
+      <p class="dek">The expansion story accounted for the bulk of competitor share-of-voice this window; other chains were quiet.</p>
+      <div class="out">The Daily Grind · Jun 26 · Reach 1,540,220</div></div>
+    </div>
+    </div>
+  </div>
+  <div class="pad"><div class="bottomline">
+    <h2>Bottom line <span class="tk">at a glance</span></h2>
+    <ul><li><b>Volume:</b> 4,180 signals, +22% vs 30d — driven by the Daybreak expansion story and the oat-milk complaint.</li><li><b>Top earned:</b> The Daily Grind — Daybreak&#x27;s anti-Northwind US rollout. Reach 1.54M.</li><li><b>Watch:</b> Twitter/X negativity +11pp on the oat-milk shortage; restock messaging recommended.</li><li><b>Bright spot:</b> Cold Brew Flights launch driving positive Reddit + Instagram engagement.</li></ul>
+  </div></div>
+  <div class="foot"><span class="fl">Confidential — internal distribution only · Meltwater · Search 10042117 · US</span><span class="fr">Northwind Coffee</span></div>
+</div>
+<button class="print-btn" onclick="window.print()" aria-label="Save as PDF">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7" rx="1"/>
+  </svg> Save as PDF
+</button>

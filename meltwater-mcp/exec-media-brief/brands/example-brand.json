@@ -1,0 +1,47 @@
+{
+  "_comment": "Fork this file per brand. Point savedSearchIds at your own Meltwater saved searches, set the competitor watchlist, and (optionally) restyle via `theme`. Nothing here is Meltwater-customer-specific — 'Northwind Coffee' is a fictional demo brand.",
+
+  "name": "Northwind Coffee",
+  "wordmark": "Northwind",
+  "logoUrl": null,
+  "market": "US",
+
+  "savedSearches": {
+    "brand": "SAVED_SEARCH_ID_BRAND",
+    "competitors": "SAVED_SEARCH_ID_COMPETITORS"
+  },
+  "_savedSearches_note": "Replace with your real Meltwater saved-search IDs. The brand search is the sole authority on relevance — the agent queries it with query:'*' so results sort purely by the requested metric (see exec_media_brief.py).",
+
+  "competitors": ["Percolate Bros", "Daybreak Roasters", "Corner Cup", "Bean Theory"],
+
+  "platforms": ["News", "Instagram", "Twitter / X", "Facebook", "Reddit", "TikTok"],
+
+  "floors": {
+    "twitter_views": 10000,
+    "instagram_views": 10000,
+    "tiktok_views": 10000,
+    "facebook_reach": 50000,
+    "reddit_reach": 50000,
+    "other_reach": 50000
+  },
+
+  "sections": {
+    "earned_media": true,
+    "social_ugc": true,
+    "reddit": true,
+    "competitors": true
+  },
+
+  "distribution": {
+    "confidential": "Confidential — internal distribution only"
+  },
+
+  "_theme_note": "Optional CSS-variable overrides — omit any key for the neutral default. See README 'Theme colours' for what each paints. `primary` is the main brand accent (pills, kickers, links, buttons); `ink` is the dark surfaces (masthead glance boxes, bottom-line panel). Sentiment colours (green/red/grey) are fixed and not themeable.",
+  "theme": {
+    "primary": "#2b59c3",
+    "primaryHi": "#1e3e8c",
+    "ink": "#1e2433",
+    "accentWarm": "#d99a2b",
+    "surface": "#f6f5f2"
+  }
+}
