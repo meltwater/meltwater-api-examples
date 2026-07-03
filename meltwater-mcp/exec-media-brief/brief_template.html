@@ -1,0 +1,239 @@
+<!--
+  Exec Media Brief — flat static template (brand-neutral).
+
+  This is a clean, self-contained HTML shell. render.py does two substitutions:
+    {{BRAND_TOKENS}}  — a :root override block built from the brand config's `theme`
+    {{REPORT_BODY}}   — the rendered report markup (masthead, sentiment, sections…)
+
+  There is NO client-side rendering, no bundler, no data:-URI scripts, no external
+  fonts. The output is a single flat HTML file that opens in any browser / email
+  client and prints straight to PDF. Fork it and restyle via the brand config.
+-->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<style>
+:root{
+  /* ── Brand-neutral defaults. Override any of these via the brand config
+        `theme` block — render.py injects them in {{BRAND_TOKENS}} below. ── */
+  --primary:      #2b59c3;   /* section pills, kickers, links, accents        */
+  --primary-hi:   #1e3e8c;   /* hover / pressed                               */
+  --ink:          #1e2433;   /* dark surfaces: glance boxes, bottom line      */
+  --accent-warm:  #d99a2b;   /* bottom-line tag                               */
+
+  --surface:      #f6f5f2;   /* the report page                               */
+  --page:         #e7e4dd;   /* behind the report                            */
+  --card:         #ffffff;   /* cards / tiles                                 */
+  --card-alt:     #eeeae1;   /* exec-summary panel, soft fills                */
+
+  --fg:           #26303f;   /* body text                                     */
+  --fg-70:        #4b5563;
+  --fg-50:        #6b7280;
+  --fg-30:        #b6bcc6;
+  --line:         #e6e3dd;
+  --line-strong:  #cfcbc3;
+
+  --pos:      #2f8f5b;  --pos-bar: #3fa77e;
+  --neg:      #d0342c;  --neg-bar: #d0342c;
+  --neu:      #7c828c;  --neu-bar: #d7d3cb;
+
+  --font-display: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-body:    ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono:    ui-monospace, "SF Mono", "IBM Plex Mono", Menlo, Consolas, monospace;
+
+  --shadow-sm: 0 1px 2px rgba(20,24,33,.08);
+  --shadow-md: 0 4px 12px rgba(20,24,33,.08), 0 1px 2px rgba(20,24,33,.04);
+  --shadow-lg: 0 12px 32px rgba(20,24,33,.12), 0 2px 4px rgba(20,24,33,.04);
+  --radius:    16px;
+}
+{{BRAND_TOKENS}}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--page);
+  font-family: var(--font-body);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a { color: inherit; }
+
+.report {
+  width: 816px;
+  max-width: 100%;
+  margin: 40px auto;
+  background: var(--surface);
+  box-shadow: 0 24px 64px rgba(20,24,33,.16);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.pad { padding: 0 56px; }
+
+/* ── MASTHEAD ── */
+.mast { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; padding: 40px 56px 28px; }
+.mast-line { display: flex; align-items: flex-end; gap: 18px; }
+.mast .wm-text { font-family: var(--font-display); font-weight: 900; font-size: 40px; letter-spacing: -1px; line-height: .9; color: var(--primary); white-space: nowrap; }
+.mast img.wm { height: 46px; display: block; }
+.mast h1 { font-family: var(--font-display); font-weight: 900; font-size: 46px; letter-spacing: -1.5px; margin: 0; line-height: .82; color: var(--ink); white-space: nowrap; }
+.mast .mast-meta { font-family: var(--font-mono); font-size: 15px; letter-spacing: .2px; color: var(--fg-50); margin-top: 16px; }
+.glance-row { display: flex; gap: 10px; }
+.glance { text-align: center; background: var(--ink); color: #fff; border-radius: 16px; padding: 14px 18px; min-width: 128px; box-shadow: var(--shadow-md); }
+.glance.glance-neg { background: linear-gradient(135deg, #d0342c, #9a2019); }
+.glance.glance-pos { background: linear-gradient(135deg, #2f8f5b, #1c6b40); }
+.glance .g-big { font-family: var(--font-display); font-weight: 900; font-size: 30px; line-height: 1; color: #fff; }
+.glance .g-sub { font-size: 10px; opacity: .82; margin-top: 4px; letter-spacing: .3px; }
+.glance .g-d { font-weight: 700; font-size: 11px; margin-top: 8px; color: rgba(255,255,255,.85); }
+.glance .g-d.good { color: #8fe0bd; }
+.glance .g-d.bad  { color: #ffb4ad; }
+
+/* ── EXECUTIVE SUMMARY ── */
+.exec { background: var(--card-alt); border-radius: 20px; padding: 24px 26px; margin: 8px 0; }
+.exec .lab { display: inline-block; font-family: var(--font-body); font-weight: 700; font-size: 10.5px; letter-spacing: 1.2px; text-transform: uppercase; color: #fff; background: var(--primary); padding: 5px 11px; border-radius: 9999px; margin-bottom: 14px; }
+.exec p { margin: 0; font-size: 15.5px; line-height: 24px; color: var(--fg); }
+
+/* ── SECTION TITLE ── */
+.sec-title { display: flex; align-items: center; gap: 12px; margin: 40px 0 18px; }
+.sec-title .pill { display: inline-flex; align-items: baseline; gap: 7px; font-family: var(--font-body); font-weight: 700; font-size: 12px; letter-spacing: .4px; color: #fff; background: var(--primary); padding: 7px 15px; border-radius: 9999px; }
+.sec-title .pill .pn { font-family: var(--font-display); font-weight: 900; font-size: 13px; }
+.sec-title .ln { flex: 1; height: 1px; background: var(--line); }
+.sec-title .count { font-family: var(--font-mono); font-size: 11px; color: var(--fg-50); }
+
+/* ── SENTIMENT TILES ── */
+.ptiles { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+.tile { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 13px 12px; box-shadow: var(--shadow-sm); }
+.tile .t-name { font-family: var(--font-display); font-weight: 900; font-size: 12.5px; line-height: 1.1; color: var(--ink); }
+.tile .t-vol { font-family: var(--font-mono); font-size: 10px; color: var(--fg-50); margin-top: 2px; }
+.tile .t-big { font-family: var(--font-display); font-weight: 900; font-size: 32px; line-height: 1; margin-top: 10px; letter-spacing: -1px; }
+.tile .t-big.t-neg { color: var(--neg); }
+.tile .t-big.t-pos { color: var(--pos); }
+.tile .t-big.t-neu { color: var(--ink); }
+.tile .t-dom { font-size: 10px; letter-spacing: .3px; text-transform: uppercase; color: var(--fg-50); margin-top: 1px; }
+.tile .t-bar { height: 8px; margin: 11px 0 8px; }
+.tile .t-pct { font-family: var(--font-mono); font-size: 11px; color: var(--fg-70); letter-spacing: .2px; }
+.tile .t-delta { display: block; margin-top: 4px; }
+.strip-cap { font-size: 12px; line-height: 18px; color: var(--fg-50); margin: 14px 2px 0; }
+
+/* stacked sentiment bar */
+.sbar { display: flex; height: 100%; width: 100%; border-radius: 9999px; overflow: hidden; background: var(--line); }
+.sbar > i { display: block; height: 100%; }
+.sbar .pos { background: var(--pos-bar); }
+.sbar .neu { background: var(--neu-bar); }
+.sbar .neg { background: var(--neg-bar); }
+.delta { font-family: var(--font-body); font-weight: 700; font-size: 10.5px; letter-spacing: .2px; white-space: nowrap; }
+.delta.good { color: var(--pos); }
+.delta.bad  { color: var(--neg); }
+.delta.flat { color: var(--fg-50); }
+
+/* ── HERO STORY CARD ── */
+.hero-card { background: var(--card); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-md); }
+.hero-card .hc-body { padding: 24px 26px 26px; }
+.kick { font-family: var(--font-body); font-weight: 700; font-size: 10.5px; letter-spacing: 1px; text-transform: uppercase; color: var(--primary); }
+.hero-card h2 { font-family: var(--font-display); font-weight: 900; font-size: 28px; line-height: 1.06; letter-spacing: -.5px; margin: 8px 0 10px; color: var(--ink); }
+.out { font-family: var(--font-mono); font-size: 11px; color: var(--fg-50); margin-bottom: 12px; }
+.hero-card p.dek { margin: 0; font-size: 14.5px; line-height: 22px; color: var(--fg-70); }
+.quotes { display: grid; gap: 10px; margin-top: 16px; }
+.qbox { background: var(--card-alt); border-radius: 12px; padding: 14px 16px; }
+.qbox q { font-family: var(--font-display); font-weight: 800; font-size: 15.5px; line-height: 1.24; color: var(--ink); quotes: none; display: block; }
+.qbox .by { font-size: 11.5px; color: var(--fg-50); margin-top: 7px; font-weight: 600; }
+.statrow { display: flex; gap: 28px; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
+.statrow .s .k { font-size: 10px; letter-spacing: .4px; text-transform: uppercase; color: var(--fg-50); margin-bottom: 2px; }
+.statrow .s .v { font-family: var(--font-display); font-weight: 900; font-size: 17px; color: var(--ink); }
+
+/* ── STORY CARDS (grid) ── */
+.cardgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.scard { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; overflow: hidden; }
+.scard h3 { font-family: var(--font-display); font-weight: 900; font-size: 18px; line-height: 1.12; margin: 7px 0 8px; color: var(--ink); }
+.scard p.dek { margin: 0; font-size: 13px; line-height: 19px; color: var(--fg-70); }
+.scard .scard-img { width: calc(100% + 40px); margin: -18px -20px 14px; height: 168px; object-fit: cover; display: block; }
+.scard .qline { font-family: var(--font-body); font-style: italic; font-size: 13px; line-height: 19px; color: var(--fg); border-left: 3px solid var(--primary); padding-left: 12px; margin-top: 12px; }
+.scard .out { margin-top: auto; padding-top: 14px; }
+.scard--wide { grid-column: 1 / -1; flex-direction: row; align-items: stretch; gap: 20px; }
+.scard--wide .scard-img-side { flex: 0 0 200px; width: 200px; align-self: stretch; object-fit: cover; border-radius: 12px; }
+.scard--wide .scard-body { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.scard--wide .scard-body .out { margin-top: auto; padding-top: 14px; }
+
+/* headline links */
+.hl { color: inherit; text-decoration: none; }
+.hl:hover { color: var(--primary); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+@media print { .hl { color: inherit; text-decoration: none; } }
+
+/* ── REDDIT-STYLE CARDS (engagement rail) ── */
+.reddit-card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px 20px; box-shadow: var(--shadow-sm); display: flex; gap: 18px; align-items: flex-start; }
+.reddit-card .eng { flex: 0 0 auto; text-align: center; background: var(--card-alt); border-radius: 12px; padding: 12px 14px; min-width: 76px; }
+.reddit-card .eng .n { font-family: var(--font-display); font-weight: 900; font-size: 22px; line-height: 1; color: var(--primary); }
+.reddit-card .eng .l { font-size: 9px; letter-spacing: .6px; text-transform: uppercase; color: var(--fg-50); margin-top: 4px; }
+.reddit-card .body { flex: 1; min-width: 0; }
+.reddit-card .hd { font-family: var(--font-mono); font-size: 11px; color: var(--fg-50); margin-bottom: 5px; }
+.reddit-card h3 { font-family: var(--font-display); font-weight: 900; font-size: 18px; line-height: 1.14; margin: 0 0 8px; color: var(--ink); }
+.reddit-card p.dek { margin: 0; font-size: 13.5px; line-height: 20px; color: var(--fg-70); }
+.reddit-card .qline { font-family: var(--font-body); font-style: italic; font-size: 13.5px; color: var(--fg); border-left: 3px solid var(--primary); padding-left: 12px; margin-top: 12px; }
+
+/* metric chips (social) */
+.metrics { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.metric { display: inline-flex; align-items: baseline; gap: 5px; background: var(--card-alt); border: 1px solid var(--line); border-radius: 9999px; padding: 5px 12px; }
+.metric b { font-family: var(--font-display); font-weight: 900; font-size: 14px; color: var(--ink); }
+.metric span { font-size: 10.5px; letter-spacing: .3px; text-transform: uppercase; color: var(--fg-50); }
+
+/* ── EMPTY STATE ── */
+.empty-card { background: var(--card); border: 1px dashed var(--line-strong); border-radius: 16px; padding: 22px 24px; display: flex; align-items: flex-start; gap: 16px; }
+.empty-card .mk { flex: 0 0 auto; width: 40px; height: 40px; border-radius: 9999px; background: var(--card-alt); display: flex; align-items: center; justify-content: center; }
+.empty-card .mk svg { width: 22px; height: 22px; stroke: var(--fg-50); fill: none; stroke-width: 1.6; }
+.empty-card .ek { font-family: var(--font-body); font-weight: 700; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--fg-50); }
+.empty-card p { margin: 6px 0 0; font-size: 14px; line-height: 21px; color: var(--fg-70); }
+
+/* ── BOTTOM LINE ── */
+.bottomline { background: var(--ink); color: #fff; border-radius: 22px; padding: 30px 32px; margin-top: 40px; }
+.bottomline h2 { font-family: var(--font-display); font-weight: 900; font-size: 22px; margin: 0 0 18px; color: #fff; display: flex; align-items: center; gap: 12px; }
+.bottomline h2 .tk { font-family: var(--font-body); font-weight: 700; font-size: 10.5px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent-warm); border: 1px solid rgba(255,255,255,.28); padding: 4px 10px; border-radius: 9999px; }
+.bottomline ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 13px; }
+.bottomline li { display: flex; gap: 13px; font-size: 14px; line-height: 21px; color: rgba(255,255,255,.9); }
+.bottomline li::before { content: ""; flex: 0 0 auto; width: 7px; height: 7px; border-radius: 9999px; background: var(--primary); margin-top: 7px; }
+.bottomline li b { color: #fff; font-weight: 700; }
+
+/* ── FOOTER ── */
+.foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 28px 56px 40px; margin-top: 8px; border-top: 1px solid var(--line); }
+.foot .fl { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .3px; color: var(--fg-50); }
+.foot .fr { font-family: var(--font-body); font-weight: 700; font-size: 10.5px; letter-spacing: 1px; text-transform: uppercase; color: var(--primary); }
+
+/* ── SAVE-AS-PDF BUTTON (screen only) ── */
+.print-btn { position: fixed; right: 28px; bottom: 28px; z-index: 50; display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-body); font-weight: 700; font-size: 14px; color: #fff; background: var(--primary); border: none; cursor: pointer; padding: 13px 20px; border-radius: 9999px; box-shadow: var(--shadow-lg); }
+.print-btn:hover { background: var(--primary-hi); }
+.print-btn svg { display: block; }
+
+/* ── RESPONSIVE ── */
+@media screen and (max-width: 680px) {
+  .pad { padding: 0 16px; }
+  .mast { flex-direction: column; gap: 16px; padding: 24px 16px 20px; }
+  .mast h1 { font-size: 32px; }
+  .glance-row { flex-direction: row; gap: 10px; }
+  .glance { min-width: 0; flex: 1; padding: 12px 10px; }
+  .ptiles { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .cardgrid { grid-template-columns: 1fr; gap: 10px; }
+  .scard--wide { flex-direction: column; }
+  .scard--wide .scard-img-side { width: 100%; height: 180px; }
+  .hero-card h2 { font-size: 22px; }
+  .foot { flex-direction: column; gap: 4px; padding: 16px; text-align: center; }
+}
+
+/* ── PRINT ── */
+@media print {
+  @page { size: letter; margin: 13mm 0; }
+  body { background: #fff; }
+  .print-btn { display: none !important; }
+  .report { width: auto; margin: 0; box-shadow: none; border-radius: 0; }
+  .mast, .foot { padding-left: 14mm; padding-right: 14mm; }
+  .pad { padding: 0 14mm; }
+  .tile, .hero-card, .scard, .reddit-card, .empty-card, .exec, .bottomline { break-inside: avoid; }
+  .sec-title { break-after: avoid; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+<div class="report" id="report">
+{{REPORT_BODY}}
+</div>
+<button class="print-btn" onclick="window.print()" aria-label="Save as PDF">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7" rx="1"/>
+  </svg> Save as PDF
+</button>

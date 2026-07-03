@@ -1,29 +1,27 @@
-# meltwater-api-examples
+# Meltwater API Examples
 
-Code examples for Meltwater API customers building custom solutions.
+Example code for Meltwater API and MCP customers building their own solutions for PR & marketing use cases.
+
+## Documentation
+
+For the full API reference, guides, and help, visit the **Meltwater Developer Portal** at
+[developer.meltwater.com](https://developer.meltwater.com). This repository provides runnable
+examples to complement that documentation.
 
 ## Repository structure
 
-Examples are organized by use case, then by language:
+Examples are grouped by the Meltwater product they use, then by use case:
 
 ```text
-examples/
+meltwater-mcp/
   <use-case>/
-    python/
-    javascript/
-    java/
 ```
 
-## Getting started
+## Examples
 
-1. Create or choose a use-case directory under `/examples`.
-2. Add one or more language folders for that use case.
-3. Place runnable code samples and a short `README.md` in each language folder.
+**Meltwater MCP (reference agents)**
 
-## Initial scaffold
-
-This repository includes a starter use case at:
-
-- `/examples/social-listening/python`
-- `/examples/social-listening/javascript`
-- `/examples/social-listening/java`
+- [`meltwater-mcp/exec-media-brief`](meltwater-mcp/exec-media-brief) — a reference
+  agent that uses Meltwater MCP to produce a branded, exec-ready daily media brief
+  (news + social), rendered to a self-contained HTML file. Runnable headless as a
+  standalone Python script or no-code via an MCP client.

@@ -1,0 +1,76 @@
+{
+  "_comment": "Illustrative BRIEF for the fictional Northwind Coffee brand — the kind of object exec_media_brief.py assembles from Meltwater. Rendered to brief.html in this folder via: uv run python render.py sample_output/sample_brief.json --out sample_output/brief.html. All figures are invented for the demo.",
+  "meta": {
+    "dateLong": "Friday, June 26, 2026",
+    "market": "US",
+    "source": "Meltwater",
+    "searchLabel": "Search 10042117",
+    "confidential": "Confidential — internal distribution only",
+    "brandName": "Northwind Coffee"
+  },
+  "execSummary": "Coverage ran hot at 4,180 signals (+22% vs the 30-day norm), tipping negative on a viral supply-chain complaint. The dominant story is a competitor's US expansion announcement being framed directly against Northwind. A positive product-launch thread on Reddit is the notable secondary signal.",
+  "sentiment": {
+    "overall": {"volume": "4,180", "pos": 21, "neu": 43, "neg": 36, "delta": "+22.0% vs 30d avg", "deltaGood": false, "foot": "30d avg 3,426/day"},
+    "platforms": [
+      {"key": "news", "label": "News", "volume": "128", "pos": 24, "neu": 66, "neg": 10, "delta": "", "deltaGood": null},
+      {"key": "instagram", "label": "Instagram", "volume": "612", "pos": 41, "neu": 42, "neg": 17, "delta": "-4.0pp neg", "deltaGood": true},
+      {"key": "twitter", "label": "Twitter / X", "volume": "2,510", "pos": 9, "neu": 39, "neg": 52, "delta": "+11.0pp neg", "deltaGood": false},
+      {"key": "facebook", "label": "Facebook", "volume": "204", "pos": 33, "neu": 44, "neg": 23, "delta": "", "deltaGood": null},
+      {"key": "reddit", "label": "Reddit", "volume": "701", "pos": 28, "neu": 41, "neg": 31, "delta": "-6.0pp neg", "deltaGood": true},
+      {"key": "tiktok", "label": "TikTok", "volume": "25", "pos": 58, "neu": 20, "neg": 22, "delta": "", "deltaGood": null}
+    ],
+    "strip": "Negative leads on Twitter/X (52%), driven by a viral oat-milk shortage complaint. Instagram and TikTok lean positive on the new Cold Brew Flights launch."
+  },
+  "sections": [
+    {"num": "01", "title": "Earned Media", "kind": "news", "count": "3 stories", "items": [
+      {"hero": true, "kicker": "Competitor — Daybreak US Expansion", "outlet": "The Daily Grind", "date": "Jun 26", "reach": "1,540,220",
+        "headline": "Daybreak Roasters to open 300 US cafés — positioned as the anti-Northwind",
+        "url": "https://example.com/daybreak-expansion", "dek": "Daybreak confirmed a 300-location US rollout through 2027, with executives repeatedly framing the chain as the value alternative to Northwind. Analysts flagged the pricing gap as the central competitive threat.",
+        "quotes": [
+          {"q": "We're investing in exactly the moments and markets our customers tell us matter most.", "by": "Priya Anand, VP Comms, Northwind Coffee"},
+          {"q": "This is a direct run at Northwind's mid-tier position.", "by": "Retail analyst, Meridian Research"}
+        ],
+        "stats": [{"k": "Reach", "v": "1,540,220"}, {"k": "Published", "v": "June 26, 2026"}]},
+      {"kicker": "Product — Cold Brew Flights", "outlet": "Sip Weekly", "date": "Jun 25", "reach": "410,880",
+        "headline": "Northwind's Cold Brew Flights land to early praise",
+        "url": "https://example.com/cold-brew-flights", "dek": "The tasting-flight format drew positive first-look coverage across food press, with reviewers highlighting the single-origin line-up."},
+      {"kicker": "Operations — Supply", "outlet": "Market Ledger", "date": "Jun 26", "reach": "296,110",
+        "headline": "Oat-milk shortage hits select Northwind locations",
+        "url": "https://example.com/oat-milk", "dek": "Regional out-of-stocks drew customer complaints; the company said restock is expected within the week."}
+    ]},
+    {"num": "02", "title": "Social - Earned / UGC", "kind": "social", "count": "3 posts", "items": [
+      {"platform": "Twitter / X", "handle": "@coffeewatch", "date": "Jun 26",
+        "headline": "Thread: why can't I get oat milk at any Northwind this week??",
+        "url": "https://example.com/x1", "dek": "Complaint thread about the oat-milk shortage picked up momentum, quote-tweeted by several food creators.",
+        "metrics": [{"k": "Views", "v": "212,400"}, {"k": "Eng", "v": "1,840"}]},
+      {"platform": "Instagram", "handle": "@bea.pours", "date": "Jun 25",
+        "headline": "First look at the new Cold Brew Flights 👀",
+        "url": "https://example.com/ig1", "dek": "Creator taste-test of the new flight format. Strong positive affinity content with an engaged comment section.",
+        "metrics": [{"k": "Views", "v": "98,300"}, {"k": "Eng", "v": "6,210"}]},
+      {"platform": "TikTok", "handle": "@thecaffeinatedcritic", "date": "Jun 26",
+        "headline": "Ranking every Northwind cold brew",
+        "url": "https://example.com/tt1", "dek": "In-car review ranking the cold brew line-up; the new flights come out on top.",
+        "metrics": [{"k": "Views", "v": "44,900"}, {"k": "Eng", "v": "3,020"}]}
+    ]},
+    {"num": "03", "title": "Reddit", "kind": "reddit", "count": "r/NorthwindCoffee", "items": [
+      {"sub": "r/NorthwindCoffee", "date": "Jun 25", "author": "u/beancounter", "eng": "412", "reach": "88,200",
+        "headline": "The Cold Brew Flight is actually a great idea — full breakdown",
+        "url": "https://example.com/rd1", "dek": "Enthusiastic breakdown of the four-origin flight with tasting notes; became the week's top thread.",
+        "quote": "Tried all four this morning. The Ethiopia natural is unreal — worth it for that alone."},
+      {"sub": "r/NorthwindCoffee", "date": "Jun 26", "author": "u/ptl_ops", "eng": "156", "reach": "61,540",
+        "headline": "PSA: oat milk out at three downtown locations",
+        "url": "https://example.com/rd2", "dek": "Community heads-up on the regional shortage, with staff confirming restock timing in the comments."}
+    ]},
+    {"num": "04", "title": "Competitors", "kind": "news", "items": [
+      {"kicker": "Competitor — Daybreak Roasters", "outlet": "The Daily Grind", "date": "Jun 26", "reach": "1,540,220",
+        "headline": "Daybreak's 300-café US push dominates competitor coverage",
+        "url": "https://example.com/daybreak-expansion", "dek": "The expansion story accounted for the bulk of competitor share-of-voice this window; other chains were quiet."}
+    ]}
+  ],
+  "bottomLine": [
+    "**Volume:** 4,180 signals, +22% vs 30d — driven by the Daybreak expansion story and the oat-milk complaint.",
+    "**Top earned:** The Daily Grind — Daybreak's anti-Northwind US rollout. Reach 1.54M.",
+    "**Watch:** Twitter/X negativity +11pp on the oat-milk shortage; restock messaging recommended.",
+    "**Bright spot:** Cold Brew Flights launch driving positive Reddit + Instagram engagement."
+  ]
+}

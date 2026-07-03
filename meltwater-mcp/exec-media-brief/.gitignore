@@ -1,0 +1,19 @@
+# Local env / secrets
+.env
+
+# Local editor / Claude Code settings
+.claude/settings.local.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Generated briefs (the sample in sample_output/ is committed; ad-hoc runs are not)
+/brief.html
+/*_brief.html
+
+# Real brand configs stay local; only the example ships. Delete these two lines if you
+# want to commit your own brand configs (e.g. in a fork).
+brands/*.json
+!brands/example-brand.json
