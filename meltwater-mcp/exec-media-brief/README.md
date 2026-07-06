@@ -10,6 +10,8 @@ An **accessible starting point** for building on Meltwater MCP: pure Meltwater, 
 a great-looking artifact on day one. (A natural next step — fusing Meltwater with your own
 first-party data — is sketched under *What's next* below.)
 
+![The rendered exec media brief — masthead, executive summary, per-platform sentiment tiles and ranked earned-media stories (fictional demo brand).](sample_output/agent_exec_media_brief.png)
+
 ## What it does
 
 ```
