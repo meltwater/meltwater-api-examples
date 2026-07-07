@@ -1,0 +1,39 @@
+{
+  "_comment": "Fork this file per campaign. Point savedSearch.id at your own Meltwater LANDSCAPE saved search (the wider conversation for your interest area + market, not your own brand mentions). Nothing here is account-specific — 'Northwind Athletic' is a fictional demo brand.",
+
+  "brand": "Northwind Athletic",
+  "wordmark": "Northwind",
+  "logoUrl": null,
+  "market": "US",
+  "interestArea": "Trail running",
+
+  "audience": {
+    "label": "Women, 25–44",
+    "note": "Interpretive lens only — not a hard data filter (Meltwater captures authors/mentions, not reader demographics)."
+  },
+
+  "objective": "Launch a social campaign that taps the current trending topics, stories and cultural moments in trail running.",
+
+  "savedSearch": {
+    "id": "SAVED_SEARCH_ID_LANDSCAPE",
+    "name": "Trail running – United States landscape"
+  },
+  "_savedSearch_note": "Replace with your real Meltwater saved-search id. Use a LANDSCAPE search (the wider interest-area conversation), not a brand search — your brand enters only as a lens for whitespace.",
+
+  "timeframe": "last 30 days",
+
+  "distribution": {
+    "confidential": "Confidential — internal planning use only"
+  },
+
+  "theme": {
+    "primary": "#1f7a5a",
+    "primaryHi": "#155c43",
+    "accent": "#e07a1f",
+    "ink": "#14312a",
+    "surface": "#ffffff",
+    "page": "#eae7e1",
+    "card": "#ffffff",
+    "cardAlt": "#f3f1ec"
+  }
+}
