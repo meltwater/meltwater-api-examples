@@ -30,3 +30,8 @@ meltwater-mcp/
   sub-agent: your orchestrator asks Meltwater for a grounded landscape insight, then authors
   a social campaign brief from it (rendered to a self-contained HTML file). Runnable
   standalone or no-code via an MCP client.
+- [`meltwater-mcp/reputation-watchdog`](meltwater-mcp/reputation-watchdog) — a reference
+  agent that scans a brand's coverage for an anomaly vs its 30-day norm and **fuses it with
+  your own first-party data** (via client-side MCP) into a single alert — showing how to join
+  Meltwater with a private internal source in your own agent. Runnable standalone or no-code
+  via an MCP client.

@@ -1,0 +1,21 @@
+# Local internal notes (not part of the example)
+internal/
+
+# Local env / secrets
+.env
+
+# Local editor / Claude Code settings
+.claude/settings.local.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Generated alerts (the sample in sample_output/ is committed; ad-hoc runs are not)
+/brief.md
+/*_brief.md
+
+# Real watch configs stay local; only the example ships. Delete these two lines to commit your own.
+watches/*.json
+!watches/example-watch.json

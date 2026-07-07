@@ -1,0 +1,31 @@
+{
+  "_comment": "Fork this file per watch. Point savedSearch.id at your own Meltwater saved search for the brand/topic you're monitoring, and firstParty at your own internal source. Nothing here is account-specific — 'Northwind Appliances' is a fictional demo brand.",
+
+  "name": "Northwind Appliances — product safety signal",
+  "brand": "Northwind Appliances",
+
+  "savedSearch": {
+    "id": "SAVED_SEARCH_ID_BRAND",
+    "name": "Northwind Appliances – US news & social"
+  },
+  "_savedSearch_note": "Replace with your real Meltwater saved-search id (the authority on relevance; the agent queries it with query:'*'). If omitted, the agent falls back to unified_retrieval_query_gen_tool on the topic name — fine to start, but a saved search gives a cleaner dataset.",
+
+  "firstParty": {
+    "url": "http://localhost:8765/mcp",
+    "label": "support desk",
+    "signalTool": "get_support_signal"
+  },
+  "_firstParty_note": "Swap for a connector to your real internal system (CRM, support desk, claims…). It runs in YOUR process via client-side MCP, so a private/internal URL is reachable and never exposed publicly.",
+
+  "regions": ["Texas", "California", "Arizona"],
+
+  "windowHours": 24,
+  "baselineDays": 30,
+
+  "asOf": null,
+  "_asOf_note": "null = today (real-time). Set an ISO date (or pass --as-of YYYY-MM-DD) to anchor the scan to a specific day — for backfilling a missed run, replaying an incident, or a demo with a known spike. The alert labels the as-of date.",
+
+  "distribution": {
+    "confidential": "Confidential — internal use only"
+  }
+}
