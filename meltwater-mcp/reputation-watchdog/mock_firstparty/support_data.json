@@ -1,0 +1,29 @@
+{
+  "_comment": "ILLUSTRATIVE data standing in for the customer's own support system. The desk sits at BASELINE most days; it only shows the elevated 'stall / loss of power' signal during the 26 May 2026 recall episode (the rise PRECEDES the press — the 'our own data was the early warning' beat). get_support_signal returns the regime that matches the scan's as-of date, so a normal day fuses to a genuine all-clear. Swap for a real connector in production.",
+
+  "issue_default": "stall / loss of power",
+
+  "incident": {
+    "active_window": {"start": "2026-05-16", "end": "2026-06-09"},
+    "center": "2026-05-26",
+    "metric": "support contacts citing 'stall' / 'loss of power'",
+    "trend": "up ~3x over the 10 days to 26 May 2026 vs prior baseline",
+    "by_region": [
+      {"region": "Texas", "change": "+3.1x"},
+      {"region": "California", "change": "+2.8x"},
+      {"region": "Arizona", "change": "+2.9x"}
+    ],
+    "lead_time": "rise began before the recall expansion broke in the press"
+  },
+
+  "baseline": {
+    "metric": "support contacts citing 'stall' / 'loss of power'",
+    "trend": "at normal baseline — no material change vs prior weeks",
+    "by_region": [
+      {"region": "Texas", "change": "~1.0x"},
+      {"region": "California", "change": "~1.0x"},
+      {"region": "Arizona", "change": "~1.0x"}
+    ],
+    "lead_time": "no early-warning signal"
+  }
+}

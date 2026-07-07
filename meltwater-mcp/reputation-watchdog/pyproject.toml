@@ -1,0 +1,19 @@
+[project]
+name = "reputation-watchdog"
+version = "0.1.0"
+description = "Reference agent on Meltwater MCP — daily brand scan fused with first-party data"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic[mcp]>=0.40",   # [mcp] extra: client-side MCP tool runner (anthropic.lib.tools.mcp)
+    "mcp>=1.2",
+    "python-dotenv>=1.0",     # load .env (optional — you can also export the vars)
+]
+
+# Run:
+#   uv sync
+#   cp .env.example .env                         # add ANTHROPIC_API_KEY + MELTWATER_API_TOKEN
+#   uv run python mock_firstparty/server.py &    # start the mock first-party source
+#   uv run python reputation_watchdog.py --watch watches/example-watch.json --out brief.md
+#
+# Anchor the scan to a specific day (backfill / replay / demo):
+#   uv run python reputation_watchdog.py --watch watches/example-watch.json --as-of 2026-05-26
