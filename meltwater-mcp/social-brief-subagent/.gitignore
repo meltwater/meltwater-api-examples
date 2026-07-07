@@ -1,0 +1,21 @@
+# Local env / secrets
+.env
+
+# Local editor / Claude Code settings
+.claude/settings.local.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Generated briefs + contract artefacts (the sample in sample_output/ is committed; ad-hoc runs are not)
+/brief.html
+/brief.insight.json
+/brief.brief.json
+/*_brief.html
+
+# Real campaign configs stay local; only the example ships. Delete these two lines if you
+# want to commit your own campaign configs (e.g. in a fork).
+campaigns/*.json
+!campaigns/example-campaign.json

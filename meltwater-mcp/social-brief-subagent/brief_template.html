@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<style>
+  :root{
+    --primary:#111111; --primary-hi:#000000; --accent:#0063eb;
+    --ink:#141414; --surface:#ffffff; --page:#e9e9ea; --card:#ffffff; --card-alt:#f4f5f7;
+    --line:#e4e6ea; --muted:#6b7280; --text:#1c1f24;
+    --font-display:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  {{BRAND_TOKENS}}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--page);color:var(--text);font-family:var(--font-body);
+    line-height:1.5;-webkit-font-smoothing:antialiased;padding:28px 16px 64px}
+  .report{max-width:860px;margin:0 auto;background:var(--surface);border-radius:14px;
+    box-shadow:0 1px 3px rgba(0,0,0,.08),0 12px 40px rgba(0,0,0,.10);overflow:hidden}
+  .pad{padding:0 40px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* masthead */
+  .mast{background:var(--ink);color:#fff;padding:30px 40px 26px}
+  .mast-line{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+  .wm-text{font-family:var(--font-display);font-weight:800;font-size:23px;letter-spacing:-.02em}
+  .wm{height:26px;width:auto}
+  .kind{font-family:var(--font-display);font-weight:700;font-size:23px;letter-spacing:-.02em;opacity:.95}
+  .mast-meta{margin-top:10px;font-size:12.5px;color:rgba(255,255,255,.68);
+    text-transform:uppercase;letter-spacing:.08em}
+  .mast-obj{margin-top:16px;font-size:15px;color:rgba(255,255,255,.92);max-width:64ch}
+  .mast-obj b{color:#fff}
+
+  /* concept hero */
+  .concept-hero{padding:26px 40px 4px}
+  .concept-hero .lab{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent)}
+  .concept-hero h1{font-family:var(--font-display);font-size:30px;line-height:1.12;
+    letter-spacing:-.02em;margin:6px 0 0;color:var(--ink)}
+
+  /* section titles */
+  .sec-title{display:flex;align-items:center;gap:12px;margin:30px 0 14px}
+  .pill{display:inline-block;background:var(--primary);color:#fff;font-weight:700;font-size:12px;
+    letter-spacing:.02em;padding:5px 11px;border-radius:999px;white-space:nowrap}
+  .pill .pn{opacity:.6;margin-right:5px}
+  .ln{height:1px;background:var(--line);flex:1}
+  .count{font-size:12px;color:var(--muted);white-space:nowrap}
+
+  /* strategic summary */
+  .summary{font-size:16.5px;line-height:1.6;color:var(--text);margin:0}
+
+  /* insight foundation panel — the visible Meltwater contribution */
+  .insight-panel{background:var(--card-alt);border:1px solid var(--line);border-radius:12px;
+    padding:20px 22px;margin-top:4px}
+  .insight-panel .ptag{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;
+    text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:12px}
+  .insight-panel .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+  .ins{display:flex;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
+  .ins:first-of-type{border-top:none;padding-top:2px}
+  .ins .n{flex:0 0 22px;font-family:var(--font-display);font-weight:800;color:var(--accent);font-size:15px}
+  .ins .it{font-weight:650;color:var(--ink)}
+  .ins .sw{color:var(--muted);font-size:14px;margin-top:2px}
+
+  /* concept cards */
+  .concepts{display:flex;flex-direction:column;gap:16px}
+  .ccard{border:1px solid var(--line);border-radius:12px;padding:20px 22px;background:var(--card)}
+  .ccard h3{font-family:var(--font-display);font-size:19px;letter-spacing:-.01em;margin:0 0 6px;color:var(--ink)}
+  .ccard .big{font-size:15.5px;color:var(--text);margin:0 0 10px}
+  .ccard .why{font-size:14px;color:var(--muted);margin:0 0 14px}
+  .grounded{display:inline-block;font-size:11.5px;color:var(--primary);background:color-mix(in srgb,var(--primary) 9%,transparent);
+    border:1px solid color-mix(in srgb,var(--primary) 22%,transparent);border-radius:6px;
+    padding:3px 8px;margin-bottom:14px}
+  .grounded b{font-weight:700}
+  .formats{display:flex;flex-direction:column;gap:8px;margin:0 0 12px}
+  .fmt{display:flex;gap:10px;font-size:14px;align-items:baseline}
+  .fmt .pf{flex:0 0 118px;font-weight:700;color:var(--ink);font-size:12.5px}
+  .fmt .idea{color:var(--text)}
+  .fmt .form{color:var(--muted);font-size:12.5px}
+  .tags{display:flex;flex-wrap:wrap;gap:6px}
+  .tag{font-size:12px;color:var(--accent);background:color-mix(in srgb,var(--accent) 8%,transparent);
+    border-radius:6px;padding:3px 8px}
+
+  /* channel plan */
+  .chan{width:100%;border-collapse:collapse;font-size:14px}
+  .chan td{padding:10px 0;border-top:1px solid var(--line);vertical-align:top}
+  .chan tr:first-child td{border-top:none}
+  .chan .c1{font-weight:700;color:var(--ink);width:150px}
+  .chan .c2{color:var(--text)}
+  .chan .c3{color:var(--muted);font-size:13px}
+
+  /* timing callout */
+  .timing{background:var(--ink);color:#fff;border-radius:12px;padding:20px 24px;margin-top:4px}
+  .timing .lab{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.6)}
+  .timing p{margin:8px 0 0;font-size:16px;line-height:1.55}
+
+  /* watchouts */
+  .watch{list-style:none;padding:0;margin:0}
+  .watch li{position:relative;padding:8px 0 8px 26px;font-size:14.5px;border-top:1px solid var(--line)}
+  .watch li:first-child{border-top:none}
+  .watch li::before{content:"!";position:absolute;left:0;top:8px;width:17px;height:17px;
+    background:var(--primary);color:#fff;border-radius:50%;font-size:11px;font-weight:800;
+    display:flex;align-items:center;justify-content:center}
+
+  /* sources */
+  .sources{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
+  .sources li{font-size:13.5px;display:flex;gap:8px;flex-wrap:wrap;align-items:baseline}
+  .sources .src-o{color:var(--muted)}
+  .sources .src-m{color:var(--muted);font-size:12px;margin-left:auto}
+
+  /* footer */
+  .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+    padding:22px 40px 30px;margin-top:26px;border-top:1px solid var(--line);
+    font-size:11.5px;color:var(--muted)}
+  .foot .fr{font-weight:700;color:var(--ink)}
+
+  .empty{color:var(--muted);font-size:14px;font-style:italic}
+
+  /* print button + print rules */
+  .pdfbtn{position:fixed;right:18px;bottom:18px;background:var(--primary);color:#fff;border:none;
+    font-family:var(--font-body);font-size:13px;font-weight:700;padding:11px 16px;border-radius:999px;
+    box-shadow:0 4px 14px rgba(0,0,0,.22);cursor:pointer}
+  .pdfbtn:hover{background:var(--primary-hi)}
+  @media print{
+    body{background:#fff;padding:0}
+    .report{box-shadow:none;border-radius:0;max-width:none}
+    .pdfbtn{display:none}
+    .ccard,.insight-panel,.timing{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+  <div class="report">
+{{REPORT_BODY}}
+  </div>
+  <button class="pdfbtn" onclick="window.print()">Save as PDF</button>
+</body>
+</html>

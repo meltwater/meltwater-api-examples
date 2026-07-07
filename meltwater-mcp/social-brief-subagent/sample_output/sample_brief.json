@@ -1,0 +1,59 @@
+{
+  "_comment": "FICTIONAL sample campaign brief — what the host agent produces from the insight payload, and what the marketer sees. Made-up brand (Northwind Athletic); invented figures.",
+  "meta": {
+    "brand": "Northwind Athletic",
+    "market": "US",
+    "dateLong": "Monday, June 16, 2025",
+    "objective": "Launch a social campaign that taps the current trending topics, stories and cultural moments in trail running.",
+    "audienceLabel": "Women, 25–44",
+    "source": "Meltwater",
+    "searchLabel": "grounded on the landscape search",
+    "confidential": "Confidential — internal planning use only"
+  },
+  "conceptName": "First Mile Club",
+  "strategicSummary": "The US trail conversation is being reshaped by first-timers and a values-led 'slow trail' movement — and this audience engages with beginner honesty far more than podium coverage. Northwind should own the on-ramp: a community campaign that makes the first trail 50K feel achievable, welcoming and un-intimidating, riding the spring race-season peak.",
+  "insightFoundation": [
+    {"insight": "Beginner/first-timer content out-engages elite race coverage for women 25–44.", "soWhat": "Point the campaign at the on-ramp, not the podium."},
+    {"insight": "'Slow trail' / no-watch running is rising fast and under-claimed by big brands.", "soWhat": "A values-led lane Northwind can credibly enter via its minimalist story."},
+    {"insight": "Spring 50K season peaks in the next 4–6 weeks with record women's entries.", "soWhat": "A live cultural moment to launch against — urgency is built in."}
+  ],
+  "concepts": [
+    {
+      "name": "First Mile Club",
+      "bigIdea": "A creator-led series following real first-timers from couch to their first trail 50K, with Northwind as the quiet enabler — kit, not ego.",
+      "why": "Turns beginner honesty (the highest-engaging content for this audience) into a repeatable, ownable franchise.",
+      "groundedIn": "Whitespace: 'champion the first-timer' + Spring 50K season moment",
+      "formats": [
+        {"platform": "TikTok / Reels", "idea": "Weekly 'first mile' diaries from 5 first-timers", "format": "creator series"},
+        {"platform": "Instagram", "idea": "Carousel: 'what nobody tells you about your first trail race'", "format": "carousel"}
+      ],
+      "hashtags": ["#FirstMileClub", "#FirstTrail50K"]
+    },
+    {
+      "name": "Leave It Better",
+      "bigIdea": "Northwind-sponsored weekend cleanup runs — purpose-led community miles that blend fitness and environment.",
+      "why": "Purpose-led runs show high share rates; community framing beats solo-hero for this audience.",
+      "groundedIn": "Cultural moment: 'trail cleanup' community runs + community-first resonance",
+      "formats": [
+        {"platform": "Instagram", "idea": "Partner with @trailsisters chapters to host cleanup runs", "format": "creator partnership"},
+        {"platform": "TikTok", "idea": "'Slow trail' device-free run edits from cleanup days", "format": "short film"}
+      ],
+      "hashtags": ["#LeaveItBetter", "#SlowTrail"]
+    }
+  ],
+  "channelPlan": [
+    {"channel": "TikTok", "role": "Discovery + the 'slow trail' aesthetic; home of the diaries", "note": "Lead creator: @slowmilesarah-style voices"},
+    {"channel": "Instagram", "role": "Community hub + partnerships (Trail Sisters chapters)", "note": "Carousels + Reels"},
+    {"channel": "Owned email", "role": "Convert engaged first-timers into the beginner trail line", "note": ""}
+  ],
+  "timingHook": "Launch against the spring 50K season peak in the next 4–6 weeks, when first-timer intake and 'can I do this?' searching are at their annual high.",
+  "watchouts": [
+    "Stay the enabler, not the hero — over-branding the diaries would break the beginner-honesty that makes them work.",
+    "'Slow trail' is values-led; a purely performance-gear message would read as co-opting the movement."
+  ],
+  "sources": [
+    {"title": "Record women's entries reshape spring ultra season", "outlet": "RunnersWorld", "url": "https://example.com/womens-ultra-surge", "metric": "Reach 640k"},
+    {"title": "'I ran my first 50K without a watch'", "outlet": "@slowmilesarah", "url": "https://example.com/slowtrail-reel", "metric": "312k views"},
+    {"title": "Trail Sisters weekend recap", "outlet": "@trailsisters", "url": "https://example.com/trailsisters-recap", "metric": "212k reach"}
+  ]
+}
