@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northwind Athletic · Campaign Insight Brief — Monday, June 16, 2025</title>
+<style>
+  :root{
+    --primary:#111111; --primary-hi:#000000; --accent:#0063eb;
+    --ink:#141414; --surface:#ffffff; --page:#e9e9ea; --card:#ffffff; --card-alt:#f4f5f7;
+    --line:#e4e6ea; --muted:#6b7280; --text:#1c1f24;
+    --font-display:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --font-body:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  :root{--primary:#1f7a5a;--primary-hi:#155c43;--accent:#e07a1f;--ink:#14312a;--surface:#ffffff;--page:#eae7e1;--card:#ffffff;--card-alt:#f3f1ec;}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--page);color:var(--text);font-family:var(--font-body);
+    line-height:1.5;-webkit-font-smoothing:antialiased;padding:28px 16px 64px}
+  .report{max-width:860px;margin:0 auto;background:var(--surface);border-radius:14px;
+    box-shadow:0 1px 3px rgba(0,0,0,.08),0 12px 40px rgba(0,0,0,.10);overflow:hidden}
+  .pad{padding:0 40px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* masthead */
+  .mast{background:var(--ink);color:#fff;padding:30px 40px 26px}
+  .mast-line{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+  .wm-text{font-family:var(--font-display);font-weight:800;font-size:23px;letter-spacing:-.02em}
+  .wm{height:26px;width:auto}
+  .kind{font-family:var(--font-display);font-weight:700;font-size:23px;letter-spacing:-.02em;opacity:.95}
+  .mast-meta{margin-top:10px;font-size:12.5px;color:rgba(255,255,255,.68);
+    text-transform:uppercase;letter-spacing:.08em}
+  .mast-obj{margin-top:16px;font-size:15px;color:rgba(255,255,255,.92);max-width:64ch}
+  .mast-obj b{color:#fff}
+
+  /* concept hero */
+  .concept-hero{padding:26px 40px 4px}
+  .concept-hero .lab{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--accent)}
+  .concept-hero h1{font-family:var(--font-display);font-size:30px;line-height:1.12;
+    letter-spacing:-.02em;margin:6px 0 0;color:var(--ink)}
+
+  /* section titles */
+  .sec-title{display:flex;align-items:center;gap:12px;margin:30px 0 14px}
+  .pill{display:inline-block;background:var(--primary);color:#fff;font-weight:700;font-size:12px;
+    letter-spacing:.02em;padding:5px 11px;border-radius:999px;white-space:nowrap}
+  .pill .pn{opacity:.6;margin-right:5px}
+  .ln{height:1px;background:var(--line);flex:1}
+  .count{font-size:12px;color:var(--muted);white-space:nowrap}
+
+  /* strategic summary */
+  .summary{font-size:16.5px;line-height:1.6;color:var(--text);margin:0}
+
+  /* insight foundation panel — the visible Meltwater contribution */
+  .insight-panel{background:var(--card-alt);border:1px solid var(--line);border-radius:12px;
+    padding:20px 22px;margin-top:4px}
+  .insight-panel .ptag{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;
+    text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:12px}
+  .insight-panel .dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+  .ins{display:flex;gap:12px;padding:11px 0;border-top:1px solid var(--line)}
+  .ins:first-of-type{border-top:none;padding-top:2px}
+  .ins .n{flex:0 0 22px;font-family:var(--font-display);font-weight:800;color:var(--accent);font-size:15px}
+  .ins .it{font-weight:650;color:var(--ink)}
+  .ins .sw{color:var(--muted);font-size:14px;margin-top:2px}
+
+  /* concept cards */
+  .concepts{display:flex;flex-direction:column;gap:16px}
+  .ccard{border:1px solid var(--line);border-radius:12px;padding:20px 22px;background:var(--card)}
+  .ccard h3{font-family:var(--font-display);font-size:19px;letter-spacing:-.01em;margin:0 0 6px;color:var(--ink)}
+  .ccard .big{font-size:15.5px;color:var(--text);margin:0 0 10px}
+  .ccard .why{font-size:14px;color:var(--muted);margin:0 0 14px}
+  .grounded{display:inline-block;font-size:11.5px;color:var(--primary);background:color-mix(in srgb,var(--primary) 9%,transparent);
+    border:1px solid color-mix(in srgb,var(--primary) 22%,transparent);border-radius:6px;
+    padding:3px 8px;margin-bottom:14px}
+  .grounded b{font-weight:700}
+  .formats{display:flex;flex-direction:column;gap:8px;margin:0 0 12px}
+  .fmt{display:flex;gap:10px;font-size:14px;align-items:baseline}
+  .fmt .pf{flex:0 0 118px;font-weight:700;color:var(--ink);font-size:12.5px}
+  .fmt .idea{color:var(--text)}
+  .fmt .form{color:var(--muted);font-size:12.5px}
+  .tags{display:flex;flex-wrap:wrap;gap:6px}
+  .tag{font-size:12px;color:var(--accent);background:color-mix(in srgb,var(--accent) 8%,transparent);
+    border-radius:6px;padding:3px 8px}
+
+  /* channel plan */
+  .chan{width:100%;border-collapse:collapse;font-size:14px}
+  .chan td{padding:10px 0;border-top:1px solid var(--line);vertical-align:top}
+  .chan tr:first-child td{border-top:none}
+  .chan .c1{font-weight:700;color:var(--ink);width:150px}
+  .chan .c2{color:var(--text)}
+  .chan .c3{color:var(--muted);font-size:13px}
+
+  /* timing callout */
+  .timing{background:var(--ink);color:#fff;border-radius:12px;padding:20px 24px;margin-top:4px}
+  .timing .lab{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.6)}
+  .timing p{margin:8px 0 0;font-size:16px;line-height:1.55}
+
+  /* watchouts */
+  .watch{list-style:none;padding:0;margin:0}
+  .watch li{position:relative;padding:8px 0 8px 26px;font-size:14.5px;border-top:1px solid var(--line)}
+  .watch li:first-child{border-top:none}
+  .watch li::before{content:"!";position:absolute;left:0;top:8px;width:17px;height:17px;
+    background:var(--primary);color:#fff;border-radius:50%;font-size:11px;font-weight:800;
+    display:flex;align-items:center;justify-content:center}
+
+  /* sources */
+  .sources{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
+  .sources li{font-size:13.5px;display:flex;gap:8px;flex-wrap:wrap;align-items:baseline}
+  .sources .src-o{color:var(--muted)}
+  .sources .src-m{color:var(--muted);font-size:12px;margin-left:auto}
+
+  /* footer */
+  .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+    padding:22px 40px 30px;margin-top:26px;border-top:1px solid var(--line);
+    font-size:11.5px;color:var(--muted)}
+  .foot .fr{font-weight:700;color:var(--ink)}
+
+  .empty{color:var(--muted);font-size:14px;font-style:italic}
+
+  /* print button + print rules */
+  .pdfbtn{position:fixed;right:18px;bottom:18px;background:var(--primary);color:#fff;border:none;
+    font-family:var(--font-body);font-size:13px;font-weight:700;padding:11px 16px;border-radius:999px;
+    box-shadow:0 4px 14px rgba(0,0,0,.22);cursor:pointer}
+  .pdfbtn:hover{background:var(--primary-hi)}
+  @media print{
+    body{background:#fff;padding:0}
+    .report{box-shadow:none;border-radius:0;max-width:none}
+    .pdfbtn{display:none}
+    .ccard,.insight-panel,.timing{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+  <div class="report">
+  <div class="mast">
+    <div class="mast-line"><span class="wm-text">Northwind</span><span class="kind">Campaign Insight Brief</span></div>
+    <div class="mast-meta">US · Women, 25–44 · Monday, June 16, 2025</div>
+    <div class="mast-obj"><b>Brief:</b> Launch a social campaign that taps the current trending topics, stories and cultural moments in trail running.</div>
+  </div>
+  <div class="concept-hero">
+    <div class="lab">The big idea</div>
+    <h1>First Mile Club</h1>
+  </div>
+  <div class="pad">
+    <div class="sec-title"><span class="pill"><span class="pn">01</span>Strategic summary</span><span class="ln"></span></div>
+    <p class="summary">The US trail conversation is being reshaped by first-timers and a values-led &#x27;slow trail&#x27; movement — and this audience engages with beginner honesty far more than podium coverage. Northwind should own the on-ramp: a community campaign that makes the first trail 50K feel achievable, welcoming and un-intimidating, riding the spring race-season peak.</p>
+    <div class="sec-title"><span class="pill"><span class="pn">02</span>Grounded in Meltwater insights</span><span class="ln"></span><span class="count">3 signals</span></div>
+    <div class="insight-panel">
+      <div class="ptag"><span class="dot"></span>Meltwater Insight Sub-Agent</div>
+      <div class="ins">
+        <div class="n">01</div>
+        <div><div class="it">Beginner/first-timer content out-engages elite race coverage for women 25–44.</div>
+          <div class="sw">Point the campaign at the on-ramp, not the podium.</div></div>
+      </div>
+      <div class="ins">
+        <div class="n">02</div>
+        <div><div class="it">&#x27;Slow trail&#x27; / no-watch running is rising fast and under-claimed by big brands.</div>
+          <div class="sw">A values-led lane Northwind can credibly enter via its minimalist story.</div></div>
+      </div>
+      <div class="ins">
+        <div class="n">03</div>
+        <div><div class="it">Spring 50K season peaks in the next 4–6 weeks with record women&#x27;s entries.</div>
+          <div class="sw">A live cultural moment to launch against — urgency is built in.</div></div>
+      </div>
+    </div>
+    <div class="sec-title"><span class="pill"><span class="pn">03</span>Campaign concepts</span><span class="ln"></span><span class="count">2</span></div>
+    <div class="concepts">
+    <div class="ccard">
+      <h3>First Mile Club</h3>
+      <p class="big">A creator-led series following real first-timers from couch to their first trail 50K, with Northwind as the quiet enabler — kit, not ego.</p>
+      <p class="why">Turns beginner honesty (the highest-engaging content for this audience) into a repeatable, ownable franchise.</p><div class="grounded"><b>Grounded in:</b> Whitespace: &#x27;champion the first-timer&#x27; + Spring 50K season moment</div>
+      <div class="formats"><div class="fmt"><div class="pf">TikTok / Reels</div><div class="idea">Weekly &#x27;first mile&#x27; diaries from 5 first-timers <span class="form">· creator series</span></div></div><div class="fmt"><div class="pf">Instagram</div><div class="idea">Carousel: &#x27;what nobody tells you about your first trail race&#x27; <span class="form">· carousel</span></div></div></div>
+      <div class="tags"><span class="tag">#FirstMileClub</span><span class="tag">#FirstTrail50K</span></div>
+    </div>
+    <div class="ccard">
+      <h3>Leave It Better</h3>
+      <p class="big">Northwind-sponsored weekend cleanup runs — purpose-led community miles that blend fitness and environment.</p>
+      <p class="why">Purpose-led runs show high share rates; community framing beats solo-hero for this audience.</p><div class="grounded"><b>Grounded in:</b> Cultural moment: &#x27;trail cleanup&#x27; community runs + community-first resonance</div>
+      <div class="formats"><div class="fmt"><div class="pf">Instagram</div><div class="idea">Partner with @trailsisters chapters to host cleanup runs <span class="form">· creator partnership</span></div></div><div class="fmt"><div class="pf">TikTok</div><div class="idea">&#x27;Slow trail&#x27; device-free run edits from cleanup days <span class="form">· short film</span></div></div></div>
+      <div class="tags"><span class="tag">#LeaveItBetter</span><span class="tag">#SlowTrail</span></div>
+    </div>
+    </div>
+    <div class="sec-title"><span class="pill"><span class="pn">04</span>Channel plan</span><span class="ln"></span></div>
+    <table class="chan"><tr><td class="c1">TikTok</td><td class="c2">Discovery + the &#x27;slow trail&#x27; aesthetic; home of the diaries</td><td class="c3">Lead creator: @slowmilesarah-style voices</td></tr><tr><td class="c1">Instagram</td><td class="c2">Community hub + partnerships (Trail Sisters chapters)</td><td class="c3">Carousels + Reels</td></tr><tr><td class="c1">Owned email</td><td class="c2">Convert engaged first-timers into the beginner trail line</td><td class="c3"></td></tr></table>
+    <div class="sec-title"><span class="pill"><span class="pn">05</span>Why now</span><span class="ln"></span></div>
+    <div class="timing"><div class="lab">Timing hook</div><p>Launch against the spring 50K season peak in the next 4–6 weeks, when first-timer intake and &#x27;can I do this?&#x27; searching are at their annual high.</p></div>
+    <div class="sec-title"><span class="pill"><span class="pn">06</span>Watch-outs</span><span class="ln"></span></div>
+    <ul class="watch"><li>Stay the enabler, not the hero — over-branding the diaries would break the beginner-honesty that makes them work.</li><li>&#x27;Slow trail&#x27; is values-led; a purely performance-gear message would read as co-opting the movement.</li></ul>
+    <div class="sec-title"><span class="pill"><span class="pn">07</span>Evidence</span><span class="ln"></span><span class="count">via Meltwater</span></div>
+    <ul class="sources">
+      <li><a href="https://example.com/womens-ultra-surge" target="_blank" rel="noopener">Record women&#x27;s entries reshape spring ultra season</a> <span class="src-o">RunnersWorld</span><span class="src-m">Reach 640k</span></li>
+      <li><a href="https://example.com/slowtrail-reel" target="_blank" rel="noopener">&#x27;I ran my first 50K without a watch&#x27;</a> <span class="src-o">@slowmilesarah</span><span class="src-m">312k views</span></li>
+      <li><a href="https://example.com/trailsisters-recap" target="_blank" rel="noopener">Trail Sisters weekend recap</a> <span class="src-o">@trailsisters</span><span class="src-m">212k reach</span></li>
+    </ul>
+  </div>
+  <div class="foot"><span class="fl">Confidential — internal planning use only · Meltwater · grounded on the landscape search · US</span><span class="fr">Northwind Athletic</span></div>
+  </div>
+  <button class="pdfbtn" onclick="window.print()">Save as PDF</button>
+</body>
+</html>

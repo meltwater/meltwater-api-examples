@@ -1,0 +1,42 @@
+{
+  "_comment": "FICTIONAL sample insight payload — invented data for a made-up brand (Northwind Athletic). This is what the Meltwater Insight Sub-Agent returns to the host agent. Live runs pull real data from your own Meltwater saved search.",
+  "grounding": {
+    "savedSearchId": "SAVED_SEARCH_ID_LANDSCAPE",
+    "savedSearchName": "Trail running – United States landscape",
+    "timeframe": "last 30 days",
+    "documentCount": 4820,
+    "resolutionNote": "Proposed 'Trail running – United States landscape' (market=US + interest=trail running; landscape, not brand-filtered) — matches the configured id.",
+    "audienceLensNote": "Women 25–44 applied as an interpretive lens, not a data filter"
+  },
+  "landscapeSummary": "The US trail-running conversation is up sharply on the back of race season and a wave of 'slow trail' content pushing back on performance culture. Mood is overwhelmingly positive and community-led, with strong momentum around women's ultra participation and gear-minimalism.",
+  "trendingTopics": [
+    {"topic": "'Slow trail' / no-watch running", "whyNow": "Backlash to data-obsessed training; creators posting device-free runs", "volumeSignal": "rising fast", "sentiment": "pos — aspirational, calming", "evidence": ["#slowtrail reels racking up 100k+ views"]},
+    {"topic": "Women's ultra surge", "whyNow": "Record female entries at spring 50Ks; first-timer diaries trending", "volumeSignal": "dominant sub-theme", "sentiment": "pos — proud, supportive", "evidence": ["Trail Sisters recap post, 212k reach"]},
+    {"topic": "Minimalist gear / 'one bottle' setups", "whyNow": "Anti-gear-maximalism; creators showing how little you need", "volumeSignal": "niche-but-hot", "sentiment": "neu/pos", "evidence": ["Reel: 'everything I carry for 20mi'"]}
+  ],
+  "culturalMoments": [
+    {"moment": "Spring 50K season peak", "timing": "next 4–6 weeks", "whyItMatters": "Highest first-timer intake of the year; audience is actively seeking encouragement and how-to", "evidence": ["Regional 50K sell-outs covered by RunnersWorld"]},
+    {"moment": "'Trail cleanup' community runs", "timing": "ongoing, weekend spikes", "whyItMatters": "Purpose-led runs blending fitness + environment; high share rates", "evidence": ["Local cleanup-run post, 88k views"]}
+  ],
+  "audienceResonance": [
+    "Women 25–44 respond to first-timer/beginner honesty far more than elite race coverage",
+    "Community + safety-in-numbers framing lands; solo-hero framing falls flat"
+  ],
+  "notableVoices": [
+    {"name": "@trailsisters", "platform": "Instagram", "why": "Central community hub for women's trail running"},
+    {"name": "@slowmilesarah", "platform": "TikTok", "why": "Face of the no-watch 'slow trail' movement"}
+  ],
+  "sentimentMood": {"overall": "Positive, community-first, wellness-leaning", "byTheme": [
+    {"theme": "Women's ultra surge", "sentiment": "very positive"},
+    {"theme": "Gear talk", "sentiment": "mixed — fatigue with maximalism"}
+  ]},
+  "whitespaceForBrand": [
+    {"angle": "Champion the first-timer, not the podium", "rationale": "Beginner content out-engages elite coverage for this audience", "authenticityCheck": "Northwind's entry-level trail line makes this credible, not opportunistic"},
+    {"angle": "Back the 'slow trail' ethos", "rationale": "Fast-rising, values-led, under-claimed by big brands", "authenticityCheck": "Fits Northwind's minimalist design story"}
+  ],
+  "evidenceAppendix": [
+    {"title": "Record women's entries reshape spring ultra season", "source": "RunnersWorld", "url": "https://example.com/womens-ultra-surge", "metric": "Reach 640k", "date": "May 28"},
+    {"title": "'I ran my first 50K without a watch'", "source": "@slowmilesarah", "url": "https://example.com/slowtrail-reel", "metric": "312k views", "date": "Jun 3"},
+    {"title": "Trail Sisters weekend recap", "source": "@trailsisters", "url": "https://example.com/trailsisters-recap", "metric": "212k reach", "date": "Jun 9"}
+  ]
+}

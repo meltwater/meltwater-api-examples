@@ -1,0 +1,18 @@
+[project]
+name = "social-brief-subagent"
+version = "0.1.0"
+description = "Reference for the pull sub-agent pattern on Meltwater MCP — your orchestrator delegates to a Meltwater insight sub-agent, then authors a social campaign brief"
+requires-python = ">=3.11"
+dependencies = [
+    "anthropic[mcp]>=0.40",   # [mcp] extra: client-side MCP tool runner (anthropic.lib.tools.mcp)
+    "mcp>=1.2",
+    "python-dotenv>=1.0",     # load .env (optional — you can also export the vars)
+]
+
+# Run:
+#   uv sync
+#   cp .env.example .env                                       # add ANTHROPIC_API_KEY + MELTWATER_API_TOKEN
+#   uv run python social_brief_subagent.py --out brief.html    # full two-agent run (needs MELTWATER_API_TOKEN)
+#
+# Render only (no Meltwater / no API key — handy for template work):
+#   uv run python render.py sample_output/sample_brief.json --campaign campaigns/example-campaign.json --out sample_output/brief.html
