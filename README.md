@@ -1,15 +1,18 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/meltwater-logo-white.svg">
+  <img src="assets/meltwater-logo.svg" alt="Meltwater" width="240">
+</picture>
+
 # Meltwater API Examples
 
 ### Build your own AI agents on Meltwater's media intelligence.
 
-Runnable, forkable **reference agents** that call the **Meltwater MCP** server to do real PR &
+Runnable, forkable **example agents** that call the **Meltwater MCP** server to do real PR &
 comms work — crisis monitoring, executive briefings, campaign insight — as code that runs in
 *your* systems. Not a chatbot and not a dashboard: agents your team owns, schedules, and wires
 into its own data.
 
-Each example is a complete starting point — **one config file to make it yours, one credential
-to run it, a polished result on day one.** Fork one and you can have a working proof-of-concept
-this afternoon.
+Each example is a complete starting point, **not tested production code**. Fork one and you can have a working proof-of-concept immediately. Tweak, extend, polish and test the code to make it yours. 
 
 ---
 
