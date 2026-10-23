@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: uv
+    directories:
+      - /meltwater-mcp/exec-media-brief
+      - /meltwater-mcp/reputation-watchdog
+      - /meltwater-mcp/social-brief-subagent
+    schedule:
+      interval: weekly
+    groups:
+      python-dependencies:
+        patterns:
+          - "*"
