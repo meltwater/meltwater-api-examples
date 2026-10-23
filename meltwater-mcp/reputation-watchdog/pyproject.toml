@@ -5,7 +5,7 @@ description = "Reference agent on Meltwater MCP — daily brand scan fused with 
 requires-python = ">=3.11"
 dependencies = [
     "anthropic[mcp]>=0.40",   # [mcp] extra: client-side MCP tool runner (anthropic.lib.tools.mcp)
-    "mcp>=1.30,<2",
+    "mcp>=1.30,<3",
     "python-dotenv>=1.0",     # load .env (optional — you can also export the vars)
 ]
 
