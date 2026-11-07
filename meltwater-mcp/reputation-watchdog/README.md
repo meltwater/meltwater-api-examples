@@ -78,6 +78,10 @@ and **the alert labels the as-of date**, so a backdated run is never mistaken fo
 
 Or put them in `.env` (`cp .env.example .env`). The code never hardcodes a key.
 
+If the script stops with `MCPError(-32603, 'Server returned an error response')` while connecting
+to Meltwater, the server most likely rejected your token — check `MELTWATER_API_TOKEN` is set,
+current and copied in full.
+
 ## Quickstart (standalone)
 
 ```bash

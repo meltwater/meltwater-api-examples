@@ -32,8 +32,9 @@ from string import Template
 import anthropic
 from anthropic.lib.tools.mcp import async_mcp_tool
 from dotenv import load_dotenv
+import httpx2
 from mcp import ClientSession
-from mcp.client.streamable_http import streamablehttp_client
+from mcp.client.streamable_http import streamable_http_client
 
 # Load a local .env if present. Does NOT override variables already exported in the shell.
 load_dotenv()
@@ -147,8 +148,12 @@ def build_scan_instruction(cfg: dict, win: dict) -> str:
 async def open_session(stack, url, headers=None):
     """Open an in-process MCP client session to `url`. Tools execute client-side — so a
     private/internal URL (localhost, VPC) is reachable; nothing is exposed publicly."""
-    read, write, _ = await stack.enter_async_context(
-        streamablehttp_client(url, headers=headers or {})
+    # Same timeouts as the MCP SDK's default client: the server may hold a stream open.
+    http = await stack.enter_async_context(
+        httpx2.AsyncClient(headers=headers or {}, timeout=httpx2.Timeout(30, read=300))
+    )
+    read, write = await stack.enter_async_context(
+        streamable_http_client(url, http_client=http)
     )
     session = await stack.enter_async_context(ClientSession(read, write))
     await session.initialize()
