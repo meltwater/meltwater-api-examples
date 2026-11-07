@@ -90,6 +90,10 @@ You need two things:
 Either `export` them or put them in a `.env` file (`cp .env.example .env`) — the script loads
 `.env` automatically, and exported vars take precedence. The code never hardcodes a key.
 
+If the script stops with `MCPError(-32603, 'Server returned an error response')` while connecting
+to Meltwater, the server most likely rejected your token — check `MELTWATER_API_TOKEN` is set,
+current and copied in full.
+
 ## Quickstart (standalone)
 
 ```bash

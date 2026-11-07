@@ -7,17 +7,17 @@ support-contact data for the Toyota example so the agent can demonstrate the joi
 Run standalone:   uv run python mock_firstparty/server.py
 An MCP client (e.g. Claude Code) can also launch this locally as an MCP server.
 
-Draft — confirm FastMCP transport/version against your installed `mcp` package.
+Draft — confirm MCPServer transport/version against your installed `mcp` package.
 """
 
 import json
 from datetime import date, datetime
 from pathlib import Path
 
-from mcp.server.fastmcp import FastMCP
+from mcp.server.mcpserver import MCPServer
 
-# Port matches MOCK_FIRSTPARTY_URL in the agent (.env.example default: localhost:8765).
-mcp = FastMCP("support_desk", port=8765)
+# Port (set in mcp.run below) matches MOCK_FIRSTPARTY_URL in the agent (.env.example default: localhost:8765).
+mcp = MCPServer("support_desk")
 DATA = json.loads((Path(__file__).parent / "support_data.json").read_text())
 
 
@@ -61,4 +61,4 @@ def get_support_signal(issue: str, as_of: str = "", days: int = 10) -> dict:
 if __name__ == "__main__":
     # HTTP so the standalone agent can attach it as a client-side MCP client over localhost.
     # For MCP-client local use, stdio also works: mcp.run(transport="stdio")
-    mcp.run(transport="streamable-http")
+    mcp.run(transport="streamable-http", port=8765)

@@ -33,8 +33,9 @@ from string import Template
 import anthropic
 from anthropic.lib.tools.mcp import async_mcp_tool
 from dotenv import load_dotenv
+import httpx2
 from mcp import ClientSession
-from mcp.client.streamable_http import streamablehttp_client
+from mcp.client.streamable_http import streamable_http_client
 
 import render
 
@@ -128,8 +129,12 @@ def require_anthropic_credentials():
 
 async def open_session(stack, url, headers=None):
     """Open an in-process MCP client session to `url`. Tools execute client-side."""
-    read, write, _ = await stack.enter_async_context(
-        streamablehttp_client(url, headers=headers or {})
+    # Same timeouts as the MCP SDK's default client: the server may hold a stream open.
+    http = await stack.enter_async_context(
+        httpx2.AsyncClient(headers=headers or {}, timeout=httpx2.Timeout(30, read=300))
+    )
+    read, write = await stack.enter_async_context(
+        streamable_http_client(url, http_client=http)
     )
     session = await stack.enter_async_context(ClientSession(read, write))
     await session.initialize()
